@@ -1,0 +1,175 @@
+﻿/*Resets Bootstrap*/
+html, body{z-index: 9999;height:100%;min-height:100%;display:block;min-width: 741px;}
+*:focus{ outline: none; }
+
+.navbar-default {background-color:#63ce00;border:none;margin-bottom:0;}
+.no-radius{border-radius:0 !important;-webkit-border-radius:0 !important;-moz-border-radius:0 !important;}
+.no-shadow{webkit-box-shadow: none;box-shadow: none;-webkit-transition: none;transition: none;}
+.navbar-right .dropdown-menu{ right: -205%;}
+.navbar-right .dropdown-menu:before {position: absolute;top: -7px;left: 46%;display: inline-block;border-right: 7px solid transparent;border-bottom: 7px solid #92d567;border-left: 7px solid transparent;border-bottom-color: rgba(0,0,0,0.2);content: '';}
+.navbar-right .dropdown-menu:after {position: absolute;top: -6px;left: 47%;display: inline-block;border-right: 6px solid transparent;border-bottom: 6px solid #63ce00;border-left: 6px solid transparent;content: '';}
+.popover:not(.in)>div>div>a{ z-index: -9999;}
+
+.frm{background-color:#FFF;float: none;padding: 0;margin-top: 90px;}
+.frm .frm-login{width:325px;margin:36px auto 0;}
+.frm .frm-login .input-group{ width: 100%;}
+.tela-login{ background-color: #f7f6f5;}
+.logo-marca {height:60px;line-height:60px;margin:0 auto;font-size:22px;font-weight:100;color:#FFF;background-color: #63ce00;}
+.logo-marca-cadastro{width:355px;}
+.logo-marca span{display: block;line-height: 60px;font-size: 18px;}
+.logo-marca span b{width: 42px;height: 42px;line-height: 40px;text-indent: -99999px;display: inline-block;background:url('../../Assets/Images/glyphon.png') no-repeat 0 0;}
+.input-group-addon.addon-login{ text-indent: -99999px;width: 44px;background:url('../../Assets/Images/glyphon.png') no-repeat 0 -68px #e1e1e1; }
+.input-group-addon.addon-senha{ text-indent: -99999px;width: 44px;background:url('../../Assets/Images/glyphon.png') no-repeat 0 -117px #e1e1e1; }
+.input-group > input[type=text]:focus,
+.input-group > input[type=password]:focus{color: #92d567 !important;border-color: #92d567;webkit-box-shadow: none;box-shadow: none;-webkit-transition: none;transition: none;}
+.input-group .input-with-focus{background-color: #92d567;border-color: #92d567;webkit-box-shadow: none;box-shadow: none;-webkit-transition: none;transition: none;}
+/*Menu Superior - Dashboard*/
+.navbar{background-color: #FFF;border: 0;margin-bottom: 0;border-bottom: 1px solid #e1e1e1;}
+.brand{float: left;width: 80px;height: 76px;text-indent: -99999px;background:url('../../Assets/Images/glyphon.png') no-repeat -44px 0;}
+.brand + .breadcrumb{ float: left;line-height: 62px;height: 76px;margin-bottom: 0;}
+.itens-usuario{ position: relative;}
+
+.notificacao,
+.inclusao{ margin: 25px 12px 0;float: left;position: relative; }
+.notificacao button,
+.inclusao button{ position: relative;width: 40px;height: 40px;border: none;background: url('../../Assets/Images/glyphon.png') no-repeat transparent;}
+.notificacao button{ background-position: -143px 1px; }
+.inclusao button{ background-position: -148px -45px; }
+.notificacao button b,
+.inclusao button b{position: absolute;border: 1px solid #FFF;line-height: 15px;top: 0;right: 0;color: #FFF;font-weight: 100;font-size: 12px;width: 18px;height: 18px;background-color: #92d567;border-radius:15px;-webkit-border-radius: 15px;-moz-border-radius:15px;}
+
+.menu-usuario{ min-width: 160px;height: 70px;margin-top: 6px;margin-right: 15px;float: left;position: relative;line-height: 65px;border: 1px solid transparent; }
+.menu-usuario > .dropdown-menu{ width: 101%;top: 69px;right: -1px;padding: 0;margin: 0;border-color: #e1e1e1;background-color: #fbfbfb;border-bottom: none;}
+.menu-usuario > .dropdown-menu > li{ border-bottom: 1px solid #e1e1e1;height: 35px;}
+.menu-usuario > .dropdown-menu > li > a{ padding: 8px 20px;}.menu-usuario > .dropdown-menu > li > a:hover{ background-color: #FFF;border-bottom: 1px solid #e1e1e1;border-left: 3px solid #92d567;color: #63ce00; }
+.menu-usuario > .dropdown-menu > li > a > b{float: left;width: 15px;height: 15px;margin: 3px 13px 0 0;background: url('../../Assets/Images/glyphon.png') no-repeat; }
+.menu-usuario > a{ display: block;float: left;color: #5a5a5a;} .menu-usuario *:hover{ text-decoration: none;}.menu-usuario > a:focus{ outline: none;}
+.menu-usuario > a > b{padding: 0 5px 0 10px;float: left;line-height: 72px;}
+.menu-usuario > a > i{ width: 15px;height: 14px;text-indent: -99999px;margin: 30px 5px 0 5px;background: url('../../Assets/Images/glyphon.png') no-repeat -128px -5px transparent;float: left;}
+.menu-usuario > a > span{ width: 50px;height: 50px;margin: 12px 10px 0 0;float: left;background: url('../../Assets/Images/glyphon.png') no-repeat -58px -278px #92D567;}.menu-usuario > a > span img{ margin: 0 auto;display: block;text-align: center;}
+.menu-usuario.open{ background-color: #fbfbfb;border: 1px solid #e1e1e1;border-bottom: none;}
+
+.menu-usuario > .dropdown-menu > li > a > b.minha-conta{ background-position: -2px -168px;}
+.menu-usuario > .dropdown-menu > li > a > b.novo-usuario{ background-position: -3px -203px;}
+.menu-usuario > .dropdown-menu > li > a > b.tela-cheia{ background-position: -2px -239px;}
+.menu-usuario > .dropdown-menu > li > a > b.sair-admin{ background-position: -4px -275px;}
+.menu-usuario > .dropdown-menu > li > a:hover > b.minha-conta{ background-position: -22px -168px;}
+.menu-usuario > .dropdown-menu > li > a:hover > b.novo-usuario{ background-position: -23px -203px;}
+.menu-usuario > .dropdown-menu > li > a:hover > b.tela-cheia{ background-position: -22px -239px;}
+.menu-usuario > .dropdown-menu > li > a:hover > b.sair-admin{ background-position: -24px -275px;}
+
+.navbar-right .menu-usuario .dropdown-menu:before {display: none;}
+.navbar-right .menu-usuario .dropdown-menu:after {top: 0;left: 0;display: none;}
+
+
+.inclusao ul.dropdown-menu,.notificacao ul.dropdown-menu{width: 200px;}
+
+.inclusao ul.dropdown-menu li a,
+.notificacao ul.dropdown-menu li a{ height: 41px;display: block;background-color: #FFF;width: 100%;padding: 0;line-height: 41px;}
+
+.inclusao ul.dropdown-menu li,
+.notificacao ul.dropdown-menu li{font-size: 12px;height: 41px;line-height: 41px;padding: 0 5px;}
+
+.inclusao ul.dropdown-menu li b.plus,
+.notificacao ul.dropdown-menu li b.plus{ width: 15px;height: 15px;float: left;margin: 14px 5px 0 5px;background: url('../../Assets/Images/glyphon.png') no-repeat -128px -24px; }
+
+.inclusao ul.dropdown-menu li:first-child,
+.notificacao ul.dropdown-menu li:first-child{height: 36px;line-height: 36px;background: none #63ce00;color: #ffffff;font-size: 13px;text-align: center;padding: 0; }
+
+.inclusao ul.dropdown-menu li a:hover,
+.notificacao ul.dropdown-menu li a:hover{ color: #63ce00;}
+.inclusao ul.dropdown-menu li a:hover b.plus,
+.notificacao ul.dropdown-menu li a:hover b.plus{ background-position: -128px -44px; }
+
+.menu-esquerdo{width: 80px;float:left;height: 100%;background-color: #f7f6f5;}
+.menu-esquerdo ul{ margin: 25px 0 0 0;padding: 0;}
+.menu-esquerdo ul li,
+.menu-esquerdo ul li a{width: 80px;height: 80px; display: block;}
+.menu-esquerdo ul li a{ padding: 24px;}
+.menu-esquerdo ul li b{width: 32px;height: 32px;display: block;margin: 0 auto;text-indent: -99999px;background: url('../../Assets/Images/glyphon.png') no-repeat;}
+
+.menu-esquerdo ul li.disabled{ opacity: 0.3;background-color: #CCC;}
+
+.menu-esquerdo ul li a.visao-geral b{background-position: -47px -83px;}
+.menu-esquerdo ul li a.reservas b{background-position: -47px -123px;}
+.menu-esquerdo ul li a.blog b{background-position: -47px -163px;}
+.menu-esquerdo ul li a.cardapio b{background-position: -47px -203px;}
+.menu-esquerdo ul li a.clientes b{background-position: -47px -243px;}
+
+/*-webkit-transition: all 0.5s linear;-moz-transition: all 0.5s linear;-o-transition: all 0.5s linear;transition: all 0.5s linear*/
+.menu-esquerdo ul li.active,.menu-esquerdo ul li:hover:not(.disabled){ border-left: 3px solid #63ce00;background-color: #FFF;}
+.menu-esquerdo ul li.active a,.menu-esquerdo ul li:hover:not(.disabled) a{ padding-left: 18px;}
+.menu-esquerdo ul li.active a.visao-geral b,.menu-esquerdo ul li:hover:not(.disabled) a.visao-geral b{background-position: -87px -83px;}
+.menu-esquerdo ul li.active a.reservas b,.menu-esquerdo ul li:hover:not(.disabled) a.reservas b{background-position: -87px -123px;}
+.menu-esquerdo ul li.active a.blog b,.menu-esquerdo ul li:hover:not(.disabled) a.blog b{background-position: -87px -163px;}
+.menu-esquerdo ul li.active a.cardapio b,.menu-esquerdo ul li:hover:not(.disabled) a.cardapio b{background-position: -87px -203px;}
+.menu-esquerdo ul li.active a.clientes b,.menu-esquerdo ul li:hover:not(.disabled) a.clientes b{background-position: -87px -243px;}
+
+.dash-estatisticas{width: 92%;float: left;padding: 30px 0 0 30px;margin: 0;}
+.dash-dados{ width: 22%;height: 207px;border: 1px solid #E1E1E1;padding: 0;margin: 0 4% 30px 0;float: left;}
+    .dash-dados:last-child{ margin-right: 0;}
+.dash-dados>b{width: 81px;height: 73px;float: left;margin: 60px 0 0 12%;text-indent: -99999px;background: url('../../Assets/Images/glyphon.png') no-repeat;}
+.dash-dados.visitas>b{ background-position: -190px -5px;}
+.dash-dados.reservas>b{ background-position: -190px -95px;}
+.dash-dados.blog>b{ background-position: -190px -176px;}
+.dash-dados.cardapio>b{ background-position: -186px -256px;}
+.dash-dados p{width: 165px;float: left;margin: 60px 0 0 14px;}
+.dash-dados>p>*{ text-align: center;display: block;clear: both;}
+.dash-dados>p>b:first-child{ font-size: 52px;font-weight: 300;line-height: 42px;color: #606060;}
+.dash-dados>p>b:last-child{ font-size: 18px;color: #b3b3b3;font-weight: 100;}
+
+.dash-listas{width: 92%;position: relative;z-index: 9999;float: left;padding: 0 0 0 30px;margin: 0;}
+.dash-lista-reserva{ margin: 0 4% 0 0;}
+.dash-lista-reserva,.dash-lista-informativo{padding: 0;width: 48%;}
+
+.table .config,.table .excluir{width: 17px;height: 17px;float: left;margin: 5px 0 0 7px;text-indent: -99999px;cursor: pointer;background: url('../../Assets/Images/glyphon.png') no-repeat;}
+.table .config{ background-position: -10px -350px;}
+.table .excluir{ background-position: -42px -350px;}
+.table .rtl-ok{ color: #63ce00;}
+.table .rtl-er{ color: #CEAD00;}
+.table .rtl-cl{ color: #CE0019;}
+.table .rtl-ex{ color: #0021CE;}
+
+.table.lista-blog tbody>tr:first-child td{ border-top: none;}
+.table.lista-blog tr td>b{text-indent: -99999px;width: 40px;height: 27px;margin: 22px 0 0 0;float: left;background: url('../../Assets/Images/glyphon.png') no-repeat 0 -290px;}
+.table.lista-blog table{ width: 90%;margin-left: 2%;float: left;}
+.table.lista-blog table thead tr td{ padding: 2px 8px;font-size: 18px;}
+.table.lista-blog table tr td{ line-height: 22px;border-top: none;}
+
+.table.lista-informativo tbody tr:first-child td{ border-top: none;}
+.table.lista-informativo b.notfy,
+.table.lista-informativo b.blog{width: 40px;height: 27px;display: inline-block;text-indent: -99999px;line-height: 26px;background: url('../../Assets/Images/glyphon.png') no-repeat 0 -318px;}
+.table.lista-informativo b.notfy{background-position: 0 -290px;}
+
+.popover-content .novo{ margin-right: 8px;}
+.popover-content .novo b,
+.popover-content .editar b{width: 19px;height: 19px;display: inline-block;background: url('../../Assets/Images/glyphon.png') no-repeat;text-indent: -99999px;}
+.popover-content .novo:hover,
+.popover-content .editar:hover{ color: #63ce00;text-decoration: none;}
+.popover-content .novo b{ background-position: -3px -200px;}
+.popover-content .editar b{ background-position: -67px -350px;}
+.popover-content .novo:hover b{ background-position: -23px -200px;}
+.popover-content .editar:hover b{ background-position: -87px -351px;}
+
+@media (max-width: 1525px) 
+{
+    .dash-dados p{width: 125px;}
+}
+
+@media (max-width:1300px)
+{
+    .dash-dados > b{float: none;margin: 30px auto 0;display: block;}
+    .dash-dados p{margin:7px 0 0 0;width: 100%;clear: both;}
+    .dash-dados>p>b:first-child{ font-size: 42px;}
+    .dash-dados>p>b:last-child{ font-size: 16px;}
+}
+
+@media (max-width: 1200px)
+{
+    .dash-lista-reserva,.dash-lista-informativo{width: 100%;}
+}
+
+@media (max-width: 1020px)
+{
+
+}

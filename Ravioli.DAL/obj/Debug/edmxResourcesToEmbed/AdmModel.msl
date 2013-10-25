@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="admin_reservasModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="tbArtigo">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbArtigo">
+        <MappingFragment StoreEntitySet="tbArtigo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="subtitulo" ColumnName="subtitulo" />
+          <ScalarProperty Name="imgThumb" ColumnName="imgThumb" />
+          <ScalarProperty Name="conteudo" ColumnName="conteudo" />
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+          <ScalarProperty Name="categoriaId" ColumnName="categoriaId" />
+          <ScalarProperty Name="dtCriacao" ColumnName="dtCriacao" />
+          <ScalarProperty Name="dtPublicacaoInicio" ColumnName="dtPublicacaoInicio" />
+          <ScalarProperty Name="hrPublicacaoInicio" ColumnName="hrPublicacaoInicio" />
+          <ScalarProperty Name="dtPublicacaoFim" ColumnName="dtPublicacaoFim" />
+          <ScalarProperty Name="hrPublicacaoFim" ColumnName="hrPublicacaoFim" />
+          <ScalarProperty Name="nomeAutor" ColumnName="nomeAutor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbArtigoCategoria">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoCategoria">
+        <MappingFragment StoreEntitySet="tbArtigoCategoria">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbArtigoCategoriaStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoCategoriaStatus">
+        <MappingFragment StoreEntitySet="tbArtigoCategoriaStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbArtigoComentario">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoComentario">
+        <MappingFragment StoreEntitySet="tbArtigoComentario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="comentario" ColumnName="comentario" />
+          <ScalarProperty Name="artigoId" ColumnName="artigoId" />
+          <ScalarProperty Name="usuarioExternoId" ColumnName="usuarioExternoId" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbArtigoComentarioStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoComentarioStatus">
+        <MappingFragment StoreEntitySet="tbArtigoComentarioStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbArtigoCompartilhado">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoCompartilhado">
+        <MappingFragment StoreEntitySet="tbArtigoCompartilhado">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="dtCompartilhado" ColumnName="dtCompartilhado" />
+          <ScalarProperty Name="artigoId" ColumnName="artigoId" />
+          <ScalarProperty Name="usuarioExternoId" ColumnName="usuarioExternoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbArtigoStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoStatus">
+        <MappingFragment StoreEntitySet="tbArtigoStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbArtigoTags">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoTags">
+        <MappingFragment StoreEntitySet="tbArtigoTags">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="artigoId" ColumnName="artigoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorico">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbHistorico">
+        <MappingFragment StoreEntitySet="tbHistorico">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mensagem" ColumnName="mensagem" />
+          <ScalarProperty Name="dataCriacao" ColumnName="dataCriacao" />
+          <ScalarProperty Name="tipoId" ColumnName="tipoId" />
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistoricoTipo">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbHistoricoTipo">
+        <MappingFragment StoreEntitySet="tbHistoricoTipo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbNotificacao">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbNotificacao">
+        <MappingFragment StoreEntitySet="tbNotificacao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="artigoId" ColumnName="artigoId" />
+          <ScalarProperty Name="pratoId" ColumnName="pratoId" />
+          <ScalarProperty Name="restauranteId" ColumnName="restauranteId" />
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+          <ScalarProperty Name="usuarioExternoId" ColumnName="usuarioExternoId" />
+          <ScalarProperty Name="tipoId" ColumnName="tipoId" />
+          <ScalarProperty Name="acaoId" ColumnName="acaoId" />
+          <ScalarProperty Name="alvoId" ColumnName="alvoId" />
+          <ScalarProperty Name="mensagem" ColumnName="mensagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbNotificacaoAcao">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbNotificacaoAcao">
+        <MappingFragment StoreEntitySet="tbNotificacaoAcao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbNotificacaoAlvo">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbNotificacaoAlvo">
+        <MappingFragment StoreEntitySet="tbNotificacaoAlvo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbNotificacaoTipo">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbNotificacaoTipo">
+        <MappingFragment StoreEntitySet="tbNotificacaoTipo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbPrato">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbPrato">
+        <MappingFragment StoreEntitySet="tbPrato">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+          <ScalarProperty Name="categoriaId" ColumnName="categoriaId" />
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+          <ScalarProperty Name="dtCriacao" ColumnName="dtCriacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbPratoCategoria">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbPratoCategoria">
+        <MappingFragment StoreEntitySet="tbPratoCategoria">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbPratoCategoriaStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbPratoCategoriaStatus">
+        <MappingFragment StoreEntitySet="tbPratoCategoriaStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbPratoRestaurante">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbPratoRestaurante">
+        <MappingFragment StoreEntitySet="tbPratoRestaurante">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pratoId" ColumnName="pratoId" />
+          <ScalarProperty Name="restauranteId" ColumnName="restauranteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbPratoStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbPratoStatus">
+        <MappingFragment StoreEntitySet="tbPratoStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbReserva">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbReserva">
+        <MappingFragment StoreEntitySet="tbReserva">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dtCriacao" ColumnName="dtCriacao" />
+          <ScalarProperty Name="dataReserva" ColumnName="dataReserva" />
+          <ScalarProperty Name="horaReserva" ColumnName="horaReserva" />
+          <ScalarProperty Name="pessoasReserva" ColumnName="pessoasReserva" />
+          <ScalarProperty Name="observacao" ColumnName="observacao" />
+          <ScalarProperty Name="favoritado" ColumnName="favoritado" />
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+          <ScalarProperty Name="restauranteId" ColumnName="restauranteId" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+          <ScalarProperty Name="origemId" ColumnName="origemId" />
+          <ScalarProperty Name="usuarioExternoId" ColumnName="usuarioExternoId" />
+          <ScalarProperty Name="efetuado" ColumnName="efetuado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbReservaOrigem">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbReservaOrigem">
+        <MappingFragment StoreEntitySet="tbReservaOrigem">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbReservaStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbReservaStatus">
+        <MappingFragment StoreEntitySet="tbReservaStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRestaurante">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbRestaurante">
+        <MappingFragment StoreEntitySet="tbRestaurante">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="endereco" ColumnName="endereco" />
+          <ScalarProperty Name="dtCadastro" ColumnName="dtCadastro" />
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRestauranteStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbRestauranteStatus">
+        <MappingFragment StoreEntitySet="tbRestauranteStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuario">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuario">
+        <MappingFragment StoreEntitySet="tbUsuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="restauranteId" ColumnName="restauranteId" />
+          <ScalarProperty Name="departamentoId" ColumnName="departamentoId" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+          <ScalarProperty Name="nivelId" ColumnName="nivelId" />
+          <ScalarProperty Name="cargoId" ColumnName="cargoId" />
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+          <ScalarProperty Name="sobre" ColumnName="sobre" />
+          <ScalarProperty Name="caminhoFoto" ColumnName="caminhoFoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarioCargo">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioCargo">
+        <MappingFragment StoreEntitySet="tbUsuarioCargo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarioCargoStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioCargoStatus">
+        <MappingFragment StoreEntitySet="tbUsuarioCargoStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarioDepartamento">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioDepartamento">
+        <MappingFragment StoreEntitySet="tbUsuarioDepartamento">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarioDepartamentoStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioDepartamentoStatus">
+        <MappingFragment StoreEntitySet="tbUsuarioDepartamentoStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarioExterno">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioExterno">
+        <MappingFragment StoreEntitySet="tbUsuarioExterno">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="tipoPerfilId" ColumnName="tipoPerfilId" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarioExternoStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioExternoStatus">
+        <MappingFragment StoreEntitySet="tbUsuarioExternoStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarioExternoTipoPerfil">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioExternoTipoPerfil">
+        <MappingFragment StoreEntitySet="tbUsuarioExternoTipoPerfil">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarioNivel">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioNivel">
+        <MappingFragment StoreEntitySet="tbUsuarioNivel">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarioNotificacao">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioNotificacao">
+        <MappingFragment StoreEntitySet="tbUsuarioNotificacao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+          <ScalarProperty Name="notificacaoId" ColumnName="notificacaoId" />
+          <ScalarProperty Name="notificacaoLido" ColumnName="notificacaoLido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarioStatus">
+      <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioStatus">
+        <MappingFragment StoreEntitySet="tbUsuarioStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

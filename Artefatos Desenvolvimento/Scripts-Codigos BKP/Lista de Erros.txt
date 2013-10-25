@@ -1,0 +1,4 @@
+Lista de Erros:
+
+0x005439443 - Erro Sumário de Login, E-mail pode ser inválido ou corrompido no banco.
+Controle "Normal/HomeController", Ação "Index"

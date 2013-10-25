@@ -1,0 +1,26 @@
+﻿@model Ravioli.Web.UI.Areas.Dashboard.Models.Usuario
+
+<div class="menu-esquerdo">
+    <ul>
+@foreach (var item in Model.MenuEsquerdo)
+{
+    if (item.Permissao)
+    {
+        var classe = "";
+        if (@item.Id == Model.Pagina)
+        {
+            classe = "class=active";
+        }
+        <li id="@item.Id" data-toggle="@item.DataToggle" data-placement="@item.DataPlacement" data-original-title="@item.DataOriginalTitle" @classe>
+            <a href="@Url.Action(item.LinkAction)" class="@item.LinkClass"><b>@item.Texto</b></a>
+        </li>
+    }
+    else
+    {
+        <li id="@item.Id" data-toggle="@item.DataToggle" data-placement="@item.DataPlacement" data-original-title="@item.DataOriginalTitle" class="disabled">
+            <a class="@item.LinkClass"><b>@item.Texto</b></a>
+        </li>
+    }
+}
+    </ul>
+</div>

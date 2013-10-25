@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB49B3F3-79C4-4814-A232-9D10A0B5ECAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ravioli.DAL</RootNamespace>
+    <AssemblyName>Ravioli.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Analytics">
+      <HintPath>..\packages\Google.GData.Analytics.2.2.0.0\lib\Google.GData.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client">
+      <HintPath>..\packages\Google.GData.Client.2.2.0.0\lib\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions">
+      <HintPath>..\packages\Google.GData.Extensions.2.2.0.0\lib\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdmModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdmModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdmModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdmModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Concreto\ControleUsuario.cs" />
+    <Compile Include="Concreto\Cripto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tbArtigo.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbArtigoCategoria.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbArtigoCategoriaStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbArtigoComentario.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbArtigoComentarioStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbArtigoCompartilhado.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbArtigoStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbArtigoTags.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbHistorico.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbHistoricoTipo.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbNotificacao.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbNotificacaoAcao.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbNotificacaoAlvo.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbNotificacaoTipo.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbPrato.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbPratoCategoria.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbPratoCategoriaStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbPratoRestaurante.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbPratoStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbReserva.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbReservaOrigem.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbReservaStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbRestaurante.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbRestauranteStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuario.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarioCargo.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarioCargoStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarioDepartamento.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarioDepartamentoStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarioExterno.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarioExternoStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarioExternoTipoPerfil.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarioNivel.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarioNotificacao.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarioStatus.cs">
+      <DependentUpon>AdmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsrLogin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AdmModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdmModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AdmModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdmModel.edmx</DependentUpon>
+      <LastGenOutput>AdmModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="AdmModel.edmx.diagram">
+      <DependentUpon>AdmModel.edmx</DependentUpon>
+    </None>
+    <None Include="AdmModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdmModel.edmx</DependentUpon>
+      <LastGenOutput>AdmModel.cs</LastGenOutput>
+    </None>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

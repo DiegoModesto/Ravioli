@@ -1,0 +1,2225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="admin_reservasModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="admin_reservasModelStoreContainer">
+          <EntitySet Name="tbArtigo" EntityType="admin_reservasModel.Store.tbArtigo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbArtigoCategoria" EntityType="admin_reservasModel.Store.tbArtigoCategoria" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbArtigoCategoriaStatus" EntityType="admin_reservasModel.Store.tbArtigoCategoriaStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbArtigoComentario" EntityType="admin_reservasModel.Store.tbArtigoComentario" store:Type="Tables" store:Schema="dbo" store:Name="tbArtigoComentario">
+            <DefiningQuery>SELECT 
+      [tbArtigoComentario].[id] AS [id], 
+      [tbArtigoComentario].[comentario] AS [comentario], 
+      [tbArtigoComentario].[artigoId] AS [artigoId], 
+      [tbArtigoComentario].[usuarioExternoId] AS [usuarioExternoId], 
+      [tbArtigoComentario].[statusId] AS [statusId]
+      FROM [dbo].[tbArtigoComentario] AS [tbArtigoComentario]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tbArtigoComentarioStatus" EntityType="admin_reservasModel.Store.tbArtigoComentarioStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbArtigoCompartilhado" EntityType="admin_reservasModel.Store.tbArtigoCompartilhado" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbArtigoStatus" EntityType="admin_reservasModel.Store.tbArtigoStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbArtigoTags" EntityType="admin_reservasModel.Store.tbArtigoTags" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbHistorico" EntityType="admin_reservasModel.Store.tbHistorico" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbHistoricoTipo" EntityType="admin_reservasModel.Store.tbHistoricoTipo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbNotificacao" EntityType="admin_reservasModel.Store.tbNotificacao" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbNotificacaoAcao" EntityType="admin_reservasModel.Store.tbNotificacaoAcao" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbNotificacaoAlvo" EntityType="admin_reservasModel.Store.tbNotificacaoAlvo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbNotificacaoTipo" EntityType="admin_reservasModel.Store.tbNotificacaoTipo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbPrato" EntityType="admin_reservasModel.Store.tbPrato" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbPratoCategoria" EntityType="admin_reservasModel.Store.tbPratoCategoria" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbPratoCategoriaStatus" EntityType="admin_reservasModel.Store.tbPratoCategoriaStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbPratoRestaurante" EntityType="admin_reservasModel.Store.tbPratoRestaurante" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbPratoStatus" EntityType="admin_reservasModel.Store.tbPratoStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbReserva" EntityType="admin_reservasModel.Store.tbReserva" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbReservaOrigem" EntityType="admin_reservasModel.Store.tbReservaOrigem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbReservaStatus" EntityType="admin_reservasModel.Store.tbReservaStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbRestaurante" EntityType="admin_reservasModel.Store.tbRestaurante" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbRestauranteStatus" EntityType="admin_reservasModel.Store.tbRestauranteStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbUsuario" EntityType="admin_reservasModel.Store.tbUsuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbUsuarioCargo" EntityType="admin_reservasModel.Store.tbUsuarioCargo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbUsuarioCargoStatus" EntityType="admin_reservasModel.Store.tbUsuarioCargoStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbUsuarioDepartamento" EntityType="admin_reservasModel.Store.tbUsuarioDepartamento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbUsuarioDepartamentoStatus" EntityType="admin_reservasModel.Store.tbUsuarioDepartamentoStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbUsuarioExterno" EntityType="admin_reservasModel.Store.tbUsuarioExterno" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbUsuarioExternoStatus" EntityType="admin_reservasModel.Store.tbUsuarioExternoStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbUsuarioExternoTipoPerfil" EntityType="admin_reservasModel.Store.tbUsuarioExternoTipoPerfil" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbUsuarioNivel" EntityType="admin_reservasModel.Store.tbUsuarioNivel" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbUsuarioNotificacao" EntityType="admin_reservasModel.Store.tbUsuarioNotificacao" store:Type="Tables" store:Schema="dbo" store:Name="tbUsuarioNotificacao">
+            <DefiningQuery>SELECT 
+      [tbUsuarioNotificacao].[id] AS [id], 
+      [tbUsuarioNotificacao].[usuarioId] AS [usuarioId], 
+      [tbUsuarioNotificacao].[notificacaoId] AS [notificacaoId], 
+      [tbUsuarioNotificacao].[notificacaoLido] AS [notificacaoLido]
+      FROM [dbo].[tbUsuarioNotificacao] AS [tbUsuarioNotificacao]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tbUsuarioStatus" EntityType="admin_reservasModel.Store.tbUsuarioStatus" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_tbArtigoComentario_tbArtigo" Association="admin_reservasModel.Store.FK_tbArtigoComentario_tbArtigo">
+            <End Role="tbArtigo" EntitySet="tbArtigo" />
+            <End Role="tbArtigoComentario" EntitySet="tbArtigoComentario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbArtigoComentario_tbArtigoComentarioStatus" Association="admin_reservasModel.Store.FK_tbArtigoComentario_tbArtigoComentarioStatus">
+            <End Role="tbArtigoComentarioStatus" EntitySet="tbArtigoComentarioStatus" />
+            <End Role="tbArtigoComentario" EntitySet="tbArtigoComentario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbArtigoComentario_tbUsuarioExterno" Association="admin_reservasModel.Store.FK_tbArtigoComentario_tbUsuarioExterno">
+            <End Role="tbUsuarioExterno" EntitySet="tbUsuarioExterno" />
+            <End Role="tbArtigoComentario" EntitySet="tbArtigoComentario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbArtigoCompartilhado_tbArtigo" Association="admin_reservasModel.Store.FK_tbArtigoCompartilhado_tbArtigo">
+            <End Role="tbArtigo" EntitySet="tbArtigo" />
+            <End Role="tbArtigoCompartilhado" EntitySet="tbArtigoCompartilhado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbArtigoCompartilhado_tbUsuarioExterno" Association="admin_reservasModel.Store.FK_tbArtigoCompartilhado_tbUsuarioExterno">
+            <End Role="tbUsuarioExterno" EntitySet="tbUsuarioExterno" />
+            <End Role="tbArtigoCompartilhado" EntitySet="tbArtigoCompartilhado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbHistorico_tbHistoricoTipo" Association="admin_reservasModel.Store.FK_tbHistorico_tbHistoricoTipo">
+            <End Role="tbHistoricoTipo" EntitySet="tbHistoricoTipo" />
+            <End Role="tbHistorico" EntitySet="tbHistorico" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbHistorico_tbUsuario" Association="admin_reservasModel.Store.FK_tbHistorico_tbUsuario">
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+            <End Role="tbHistorico" EntitySet="tbHistorico" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbNotificacao_tbNotificacaoAcao" Association="admin_reservasModel.Store.FK_tbNotificacao_tbNotificacaoAcao">
+            <End Role="tbNotificacaoAcao" EntitySet="tbNotificacaoAcao" />
+            <End Role="tbNotificacao" EntitySet="tbNotificacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbNotificacao_tbNotificacaoAlvo" Association="admin_reservasModel.Store.FK_tbNotificacao_tbNotificacaoAlvo">
+            <End Role="tbNotificacaoAlvo" EntitySet="tbNotificacaoAlvo" />
+            <End Role="tbNotificacao" EntitySet="tbNotificacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbNotificacao_tbNotificacaoTipo" Association="admin_reservasModel.Store.FK_tbNotificacao_tbNotificacaoTipo">
+            <End Role="tbNotificacaoTipo" EntitySet="tbNotificacaoTipo" />
+            <End Role="tbNotificacao" EntitySet="tbNotificacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPrato_tbPratoCategoria" Association="admin_reservasModel.Store.FK_tbPrato_tbPratoCategoria">
+            <End Role="tbPratoCategoria" EntitySet="tbPratoCategoria" />
+            <End Role="tbPrato" EntitySet="tbPrato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPrato_tbPratoStatus" Association="admin_reservasModel.Store.FK_tbPrato_tbPratoStatus">
+            <End Role="tbPratoStatus" EntitySet="tbPratoStatus" />
+            <End Role="tbPrato" EntitySet="tbPrato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPrato_tbUsuario" Association="admin_reservasModel.Store.FK_tbPrato_tbUsuario">
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+            <End Role="tbPrato" EntitySet="tbPrato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPratoCategoria_tbPratoCategoriaStatus" Association="admin_reservasModel.Store.FK_tbPratoCategoria_tbPratoCategoriaStatus">
+            <End Role="tbPratoCategoriaStatus" EntitySet="tbPratoCategoriaStatus" />
+            <End Role="tbPratoCategoria" EntitySet="tbPratoCategoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPratoRestaurante_tbPrato" Association="admin_reservasModel.Store.FK_tbPratoRestaurante_tbPrato">
+            <End Role="tbPrato" EntitySet="tbPrato" />
+            <End Role="tbPratoRestaurante" EntitySet="tbPratoRestaurante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPratoRestaurante_tbRestaurante" Association="admin_reservasModel.Store.FK_tbPratoRestaurante_tbRestaurante">
+            <End Role="tbRestaurante" EntitySet="tbRestaurante" />
+            <End Role="tbPratoRestaurante" EntitySet="tbPratoRestaurante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbReserva_tbReservaOrigem" Association="admin_reservasModel.Store.FK_tbReserva_tbReservaOrigem">
+            <End Role="tbReservaOrigem" EntitySet="tbReservaOrigem" />
+            <End Role="tbReserva" EntitySet="tbReserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbReserva_tbReservaStatus" Association="admin_reservasModel.Store.FK_tbReserva_tbReservaStatus">
+            <End Role="tbReservaStatus" EntitySet="tbReservaStatus" />
+            <End Role="tbReserva" EntitySet="tbReserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbReserva_tbRestaurante" Association="admin_reservasModel.Store.FK_tbReserva_tbRestaurante">
+            <End Role="tbRestaurante" EntitySet="tbRestaurante" />
+            <End Role="tbReserva" EntitySet="tbReserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbReserva_tbUsuarioExterno" Association="admin_reservasModel.Store.FK_tbReserva_tbUsuarioExterno">
+            <End Role="tbUsuarioExterno" EntitySet="tbUsuarioExterno" />
+            <End Role="tbReserva" EntitySet="tbReserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbRestaurante_tbRestauranteStatus" Association="admin_reservasModel.Store.FK_tbRestaurante_tbRestauranteStatus">
+            <End Role="tbRestauranteStatus" EntitySet="tbRestauranteStatus" />
+            <End Role="tbRestaurante" EntitySet="tbRestaurante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbRestaurante_tbUsuario" Association="admin_reservasModel.Store.FK_tbRestaurante_tbUsuario">
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+            <End Role="tbRestaurante" EntitySet="tbRestaurante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuario_tbUsuarioCargo" Association="admin_reservasModel.Store.FK_tbUsuario_tbUsuarioCargo">
+            <End Role="tbUsuarioCargo" EntitySet="tbUsuarioCargo" />
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuario_tbUsuarioDepartamento" Association="admin_reservasModel.Store.FK_tbUsuario_tbUsuarioDepartamento">
+            <End Role="tbUsuarioDepartamento" EntitySet="tbUsuarioDepartamento" />
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuario_tbUsuarioNivel" Association="admin_reservasModel.Store.FK_tbUsuario_tbUsuarioNivel">
+            <End Role="tbUsuarioNivel" EntitySet="tbUsuarioNivel" />
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuario_tbUsuarioStatus" Association="admin_reservasModel.Store.FK_tbUsuario_tbUsuarioStatus">
+            <End Role="tbUsuarioStatus" EntitySet="tbUsuarioStatus" />
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioCargo_tbUsuarioCargoStatus" Association="admin_reservasModel.Store.FK_tbUsuarioCargo_tbUsuarioCargoStatus">
+            <End Role="tbUsuarioCargoStatus" EntitySet="tbUsuarioCargoStatus" />
+            <End Role="tbUsuarioCargo" EntitySet="tbUsuarioCargo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioDepartamento_tbUsuarioDepartamentoStatus" Association="admin_reservasModel.Store.FK_tbUsuarioDepartamento_tbUsuarioDepartamentoStatus">
+            <End Role="tbUsuarioDepartamentoStatus" EntitySet="tbUsuarioDepartamentoStatus" />
+            <End Role="tbUsuarioDepartamento" EntitySet="tbUsuarioDepartamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioExterno_tbUsuarioExternoStatus" Association="admin_reservasModel.Store.FK_tbUsuarioExterno_tbUsuarioExternoStatus">
+            <End Role="tbUsuarioExternoStatus" EntitySet="tbUsuarioExternoStatus" />
+            <End Role="tbUsuarioExterno" EntitySet="tbUsuarioExterno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioExterno_tbUsuarioExternoTipoPerfil" Association="admin_reservasModel.Store.FK_tbUsuarioExterno_tbUsuarioExternoTipoPerfil">
+            <End Role="tbUsuarioExternoTipoPerfil" EntitySet="tbUsuarioExternoTipoPerfil" />
+            <End Role="tbUsuarioExterno" EntitySet="tbUsuarioExterno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioNotificacao_tbNotificacao" Association="admin_reservasModel.Store.FK_tbUsuarioNotificacao_tbNotificacao">
+            <End Role="tbNotificacao" EntitySet="tbNotificacao" />
+            <End Role="tbUsuarioNotificacao" EntitySet="tbUsuarioNotificacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioNotificacao_tbUsuario" Association="admin_reservasModel.Store.FK_tbUsuarioNotificacao_tbUsuario">
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+            <End Role="tbUsuarioNotificacao" EntitySet="tbUsuarioNotificacao" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tbArtigo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="titulo" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="subtitulo" Type="varchar" Nullable="false" MaxLength="120" />
+          <Property Name="imgThumb" Type="varchar" MaxLength="30" />
+          <Property Name="conteudo" Type="text" Nullable="false" />
+          <Property Name="usuarioId" Type="int" Nullable="false" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+          <Property Name="categoriaId" Type="int" Nullable="false" />
+          <Property Name="dtCriacao" Type="datetime" Nullable="false" />
+          <Property Name="dtPublicacaoInicio" Type="date" />
+          <Property Name="hrPublicacaoInicio" Type="time" />
+          <Property Name="dtPublicacaoFim" Type="date" />
+          <Property Name="hrPublicacaoFim" Type="time" />
+          <Property Name="nomeAutor" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbArtigoCategoria">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbArtigoCategoriaStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'admin_reservas.dbo.tbArtigoComentario' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tbArtigoComentario">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="artigoId" />
+            <PropertyRef Name="usuarioExternoId" />
+            <PropertyRef Name="statusId" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="comentario" Type="text" />
+          <Property Name="artigoId" Type="int" Nullable="false" />
+          <Property Name="usuarioExternoId" Type="int" Nullable="false" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbArtigoComentarioStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbArtigoCompartilhado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ip" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="dtCompartilhado" Type="datetime" Nullable="false" />
+          <Property Name="artigoId" Type="int" Nullable="false" />
+          <Property Name="usuarioExternoId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbArtigoStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbArtigoTags">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="artigoId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbHistorico">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="mensagem" Type="varchar" Nullable="false" MaxLength="120" />
+          <Property Name="dataCriacao" Type="datetime" Nullable="false" />
+          <Property Name="tipoId" Type="int" Nullable="false" />
+          <Property Name="usuarioId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbHistoricoTipo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbNotificacao">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="artigoId" Type="int" />
+          <Property Name="pratoId" Type="int" />
+          <Property Name="restauranteId" Type="int" />
+          <Property Name="usuarioId" Type="int" />
+          <Property Name="usuarioExternoId" Type="int" />
+          <Property Name="tipoId" Type="int" Nullable="false" />
+          <Property Name="acaoId" Type="int" Nullable="false" />
+          <Property Name="alvoId" Type="int" Nullable="false" />
+          <Property Name="mensagem" Type="varchar" Nullable="false" MaxLength="120" />
+        </EntityType>
+        <EntityType Name="tbNotificacaoAcao">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbNotificacaoAlvo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbNotificacaoTipo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbPrato">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="titulo" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="120" />
+          <Property Name="valor" Type="decimal" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+          <Property Name="categoriaId" Type="int" Nullable="false" />
+          <Property Name="usuarioId" Type="int" Nullable="false" />
+          <Property Name="dtCriacao" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbPratoCategoria">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbPratoCategoriaStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbPratoRestaurante">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pratoId" Type="int" Nullable="false" />
+          <Property Name="restauranteId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbPratoStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbReserva">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="dtCriacao" Type="datetime" Nullable="false" />
+          <Property Name="dataReserva" Type="date" Nullable="false" />
+          <Property Name="horaReserva" Type="time" Nullable="false" />
+          <Property Name="pessoasReserva" Type="int" Nullable="false" />
+          <Property Name="observacao" Type="varchar" MaxLength="120" />
+          <Property Name="favoritado" Type="bit" Nullable="false" />
+          <Property Name="usuarioId" Type="int" />
+          <Property Name="restauranteId" Type="int" Nullable="false" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+          <Property Name="origemId" Type="int" Nullable="false" />
+          <Property Name="usuarioExternoId" Type="int" Nullable="false" />
+          <Property Name="efetuado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbReservaOrigem">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbReservaStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbRestaurante">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="endereco" Type="varchar" MaxLength="120" />
+          <Property Name="dtCadastro" Type="datetime" Nullable="false" />
+          <Property Name="usuarioId" Type="int" Nullable="false" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbRestauranteStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbUsuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="email" Type="varchar" Nullable="false" MaxLength="120" />
+          <Property Name="senha" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="restauranteId" Type="int" Nullable="false" />
+          <Property Name="departamentoId" Type="int" Nullable="false" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+          <Property Name="nivelId" Type="int" Nullable="false" />
+          <Property Name="cargoId" Type="int" Nullable="false" />
+          <Property Name="usuarioId" Type="int" />
+          <Property Name="sobre" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="caminhoFoto" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="tbUsuarioCargo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbUsuarioCargoStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbUsuarioDepartamento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbUsuarioDepartamentoStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbUsuarioExterno">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="email" Type="varchar" Nullable="false" MaxLength="120" />
+          <Property Name="celular" Type="varchar" MaxLength="16" />
+          <Property Name="telefone" Type="varchar" MaxLength="16" />
+          <Property Name="tipoPerfilId" Type="int" Nullable="false" />
+          <Property Name="statusId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbUsuarioExternoStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbUsuarioExternoTipoPerfil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tbUsuarioNivel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'admin_reservas.dbo.tbUsuarioNotificacao' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="tbUsuarioNotificacao">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="usuarioId" />
+            <PropertyRef Name="notificacaoId" />
+            <PropertyRef Name="notificacaoLido" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="usuarioId" Type="int" Nullable="false" />
+          <Property Name="notificacaoId" Type="int" Nullable="false" />
+          <Property Name="notificacaoLido" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbUsuarioStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="60" />
+        </EntityType>
+        <Association Name="FK_tbArtigoComentario_tbArtigo">
+          <End Role="tbArtigo" Type="admin_reservasModel.Store.tbArtigo" Multiplicity="1" />
+          <End Role="tbArtigoComentario" Type="admin_reservasModel.Store.tbArtigoComentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbArtigo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbArtigoComentario">
+              <PropertyRef Name="artigoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbArtigoComentario_tbArtigoComentarioStatus">
+          <End Role="tbArtigoComentarioStatus" Type="admin_reservasModel.Store.tbArtigoComentarioStatus" Multiplicity="1" />
+          <End Role="tbArtigoComentario" Type="admin_reservasModel.Store.tbArtigoComentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbArtigoComentarioStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbArtigoComentario">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbArtigoComentario_tbUsuarioExterno">
+          <End Role="tbUsuarioExterno" Type="admin_reservasModel.Store.tbUsuarioExterno" Multiplicity="1" />
+          <End Role="tbArtigoComentario" Type="admin_reservasModel.Store.tbArtigoComentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioExterno">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbArtigoComentario">
+              <PropertyRef Name="usuarioExternoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbArtigoCompartilhado_tbArtigo">
+          <End Role="tbArtigo" Type="admin_reservasModel.Store.tbArtigo" Multiplicity="1" />
+          <End Role="tbArtigoCompartilhado" Type="admin_reservasModel.Store.tbArtigoCompartilhado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbArtigo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbArtigoCompartilhado">
+              <PropertyRef Name="artigoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbArtigoCompartilhado_tbUsuarioExterno">
+          <End Role="tbUsuarioExterno" Type="admin_reservasModel.Store.tbUsuarioExterno" Multiplicity="1" />
+          <End Role="tbArtigoCompartilhado" Type="admin_reservasModel.Store.tbArtigoCompartilhado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioExterno">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbArtigoCompartilhado">
+              <PropertyRef Name="usuarioExternoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbHistorico_tbHistoricoTipo">
+          <End Role="tbHistoricoTipo" Type="admin_reservasModel.Store.tbHistoricoTipo" Multiplicity="1" />
+          <End Role="tbHistorico" Type="admin_reservasModel.Store.tbHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbHistoricoTipo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbHistorico">
+              <PropertyRef Name="tipoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbHistorico_tbUsuario">
+          <End Role="tbUsuario" Type="admin_reservasModel.Store.tbUsuario" Multiplicity="1" />
+          <End Role="tbHistorico" Type="admin_reservasModel.Store.tbHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbHistorico">
+              <PropertyRef Name="usuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbNotificacao_tbNotificacaoAcao">
+          <End Role="tbNotificacaoAcao" Type="admin_reservasModel.Store.tbNotificacaoAcao" Multiplicity="1" />
+          <End Role="tbNotificacao" Type="admin_reservasModel.Store.tbNotificacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbNotificacaoAcao">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbNotificacao">
+              <PropertyRef Name="acaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbNotificacao_tbNotificacaoAlvo">
+          <End Role="tbNotificacaoAlvo" Type="admin_reservasModel.Store.tbNotificacaoAlvo" Multiplicity="1" />
+          <End Role="tbNotificacao" Type="admin_reservasModel.Store.tbNotificacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbNotificacaoAlvo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbNotificacao">
+              <PropertyRef Name="alvoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbNotificacao_tbNotificacaoTipo">
+          <End Role="tbNotificacaoTipo" Type="admin_reservasModel.Store.tbNotificacaoTipo" Multiplicity="1" />
+          <End Role="tbNotificacao" Type="admin_reservasModel.Store.tbNotificacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbNotificacaoTipo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbNotificacao">
+              <PropertyRef Name="tipoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPrato_tbPratoCategoria">
+          <End Role="tbPratoCategoria" Type="admin_reservasModel.Store.tbPratoCategoria" Multiplicity="1" />
+          <End Role="tbPrato" Type="admin_reservasModel.Store.tbPrato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbPratoCategoria">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPrato">
+              <PropertyRef Name="categoriaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPrato_tbPratoStatus">
+          <End Role="tbPratoStatus" Type="admin_reservasModel.Store.tbPratoStatus" Multiplicity="1" />
+          <End Role="tbPrato" Type="admin_reservasModel.Store.tbPrato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbPratoStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPrato">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPrato_tbUsuario">
+          <End Role="tbUsuario" Type="admin_reservasModel.Store.tbUsuario" Multiplicity="1" />
+          <End Role="tbPrato" Type="admin_reservasModel.Store.tbPrato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPrato">
+              <PropertyRef Name="usuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPratoCategoria_tbPratoCategoriaStatus">
+          <End Role="tbPratoCategoriaStatus" Type="admin_reservasModel.Store.tbPratoCategoriaStatus" Multiplicity="1" />
+          <End Role="tbPratoCategoria" Type="admin_reservasModel.Store.tbPratoCategoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbPratoCategoriaStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPratoCategoria">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPratoRestaurante_tbPrato">
+          <End Role="tbPrato" Type="admin_reservasModel.Store.tbPrato" Multiplicity="1" />
+          <End Role="tbPratoRestaurante" Type="admin_reservasModel.Store.tbPratoRestaurante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbPrato">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPratoRestaurante">
+              <PropertyRef Name="pratoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPratoRestaurante_tbRestaurante">
+          <End Role="tbRestaurante" Type="admin_reservasModel.Store.tbRestaurante" Multiplicity="1" />
+          <End Role="tbPratoRestaurante" Type="admin_reservasModel.Store.tbPratoRestaurante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbRestaurante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPratoRestaurante">
+              <PropertyRef Name="restauranteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbReserva_tbReservaOrigem">
+          <End Role="tbReservaOrigem" Type="admin_reservasModel.Store.tbReservaOrigem" Multiplicity="1" />
+          <End Role="tbReserva" Type="admin_reservasModel.Store.tbReserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbReservaOrigem">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReserva">
+              <PropertyRef Name="origemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbReserva_tbReservaStatus">
+          <End Role="tbReservaStatus" Type="admin_reservasModel.Store.tbReservaStatus" Multiplicity="1" />
+          <End Role="tbReserva" Type="admin_reservasModel.Store.tbReserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbReservaStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReserva">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbReserva_tbRestaurante">
+          <End Role="tbRestaurante" Type="admin_reservasModel.Store.tbRestaurante" Multiplicity="1" />
+          <End Role="tbReserva" Type="admin_reservasModel.Store.tbReserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbRestaurante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReserva">
+              <PropertyRef Name="restauranteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbReserva_tbUsuarioExterno">
+          <End Role="tbUsuarioExterno" Type="admin_reservasModel.Store.tbUsuarioExterno" Multiplicity="1" />
+          <End Role="tbReserva" Type="admin_reservasModel.Store.tbReserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioExterno">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReserva">
+              <PropertyRef Name="usuarioExternoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbRestaurante_tbRestauranteStatus">
+          <End Role="tbRestauranteStatus" Type="admin_reservasModel.Store.tbRestauranteStatus" Multiplicity="1" />
+          <End Role="tbRestaurante" Type="admin_reservasModel.Store.tbRestaurante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbRestauranteStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbRestaurante">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbRestaurante_tbUsuario">
+          <End Role="tbUsuario" Type="admin_reservasModel.Store.tbUsuario" Multiplicity="1" />
+          <End Role="tbRestaurante" Type="admin_reservasModel.Store.tbRestaurante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbRestaurante">
+              <PropertyRef Name="usuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuario_tbUsuarioCargo">
+          <End Role="tbUsuarioCargo" Type="admin_reservasModel.Store.tbUsuarioCargo" Multiplicity="1" />
+          <End Role="tbUsuario" Type="admin_reservasModel.Store.tbUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioCargo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuario">
+              <PropertyRef Name="cargoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuario_tbUsuarioDepartamento">
+          <End Role="tbUsuarioDepartamento" Type="admin_reservasModel.Store.tbUsuarioDepartamento" Multiplicity="1" />
+          <End Role="tbUsuario" Type="admin_reservasModel.Store.tbUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioDepartamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuario">
+              <PropertyRef Name="departamentoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuario_tbUsuarioNivel">
+          <End Role="tbUsuarioNivel" Type="admin_reservasModel.Store.tbUsuarioNivel" Multiplicity="1" />
+          <End Role="tbUsuario" Type="admin_reservasModel.Store.tbUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioNivel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuario">
+              <PropertyRef Name="nivelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuario_tbUsuarioStatus">
+          <End Role="tbUsuarioStatus" Type="admin_reservasModel.Store.tbUsuarioStatus" Multiplicity="1" />
+          <End Role="tbUsuario" Type="admin_reservasModel.Store.tbUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuario">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioCargo_tbUsuarioCargoStatus">
+          <End Role="tbUsuarioCargoStatus" Type="admin_reservasModel.Store.tbUsuarioCargoStatus" Multiplicity="1" />
+          <End Role="tbUsuarioCargo" Type="admin_reservasModel.Store.tbUsuarioCargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioCargoStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioCargo">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioDepartamento_tbUsuarioDepartamentoStatus">
+          <End Role="tbUsuarioDepartamentoStatus" Type="admin_reservasModel.Store.tbUsuarioDepartamentoStatus" Multiplicity="1" />
+          <End Role="tbUsuarioDepartamento" Type="admin_reservasModel.Store.tbUsuarioDepartamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioDepartamentoStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioDepartamento">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioExterno_tbUsuarioExternoStatus">
+          <End Role="tbUsuarioExternoStatus" Type="admin_reservasModel.Store.tbUsuarioExternoStatus" Multiplicity="1" />
+          <End Role="tbUsuarioExterno" Type="admin_reservasModel.Store.tbUsuarioExterno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioExternoStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioExterno">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioExterno_tbUsuarioExternoTipoPerfil">
+          <End Role="tbUsuarioExternoTipoPerfil" Type="admin_reservasModel.Store.tbUsuarioExternoTipoPerfil" Multiplicity="1" />
+          <End Role="tbUsuarioExterno" Type="admin_reservasModel.Store.tbUsuarioExterno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioExternoTipoPerfil">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioExterno">
+              <PropertyRef Name="tipoPerfilId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioNotificacao_tbNotificacao">
+          <End Role="tbNotificacao" Type="admin_reservasModel.Store.tbNotificacao" Multiplicity="1" />
+          <End Role="tbUsuarioNotificacao" Type="admin_reservasModel.Store.tbUsuarioNotificacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbNotificacao">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioNotificacao">
+              <PropertyRef Name="notificacaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioNotificacao_tbUsuario">
+          <End Role="tbUsuario" Type="admin_reservasModel.Store.tbUsuario" Multiplicity="1" />
+          <End Role="tbUsuarioNotificacao" Type="admin_reservasModel.Store.tbUsuarioNotificacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioNotificacao">
+              <PropertyRef Name="usuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="admin_reservasModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tbArtigo" EntityType="admin_reservasModel.tbArtigo" />
+          <EntitySet Name="tbArtigoCategoria" EntityType="admin_reservasModel.tbArtigoCategoria" />
+          <EntitySet Name="tbArtigoCategoriaStatus" EntityType="admin_reservasModel.tbArtigoCategoriaStatus" />
+          <EntitySet Name="tbArtigoComentario" EntityType="admin_reservasModel.tbArtigoComentario" />
+          <EntitySet Name="tbArtigoComentarioStatus" EntityType="admin_reservasModel.tbArtigoComentarioStatus" />
+          <EntitySet Name="tbArtigoCompartilhado" EntityType="admin_reservasModel.tbArtigoCompartilhado" />
+          <EntitySet Name="tbArtigoStatus" EntityType="admin_reservasModel.tbArtigoStatus" />
+          <EntitySet Name="tbArtigoTags" EntityType="admin_reservasModel.tbArtigoTags" />
+          <EntitySet Name="tbHistorico" EntityType="admin_reservasModel.tbHistorico" />
+          <EntitySet Name="tbHistoricoTipo" EntityType="admin_reservasModel.tbHistoricoTipo" />
+          <EntitySet Name="tbNotificacao" EntityType="admin_reservasModel.tbNotificacao" />
+          <EntitySet Name="tbNotificacaoAcao" EntityType="admin_reservasModel.tbNotificacaoAcao" />
+          <EntitySet Name="tbNotificacaoAlvo" EntityType="admin_reservasModel.tbNotificacaoAlvo" />
+          <EntitySet Name="tbNotificacaoTipo" EntityType="admin_reservasModel.tbNotificacaoTipo" />
+          <EntitySet Name="tbPrato" EntityType="admin_reservasModel.tbPrato" />
+          <EntitySet Name="tbPratoCategoria" EntityType="admin_reservasModel.tbPratoCategoria" />
+          <EntitySet Name="tbPratoCategoriaStatus" EntityType="admin_reservasModel.tbPratoCategoriaStatus" />
+          <EntitySet Name="tbPratoRestaurante" EntityType="admin_reservasModel.tbPratoRestaurante" />
+          <EntitySet Name="tbPratoStatus" EntityType="admin_reservasModel.tbPratoStatus" />
+          <EntitySet Name="tbReserva" EntityType="admin_reservasModel.tbReserva" />
+          <EntitySet Name="tbReservaOrigem" EntityType="admin_reservasModel.tbReservaOrigem" />
+          <EntitySet Name="tbReservaStatus" EntityType="admin_reservasModel.tbReservaStatus" />
+          <EntitySet Name="tbRestaurante" EntityType="admin_reservasModel.tbRestaurante" />
+          <EntitySet Name="tbRestauranteStatus" EntityType="admin_reservasModel.tbRestauranteStatus" />
+          <EntitySet Name="tbUsuario" EntityType="admin_reservasModel.tbUsuario" />
+          <EntitySet Name="tbUsuarioCargo" EntityType="admin_reservasModel.tbUsuarioCargo" />
+          <EntitySet Name="tbUsuarioCargoStatus" EntityType="admin_reservasModel.tbUsuarioCargoStatus" />
+          <EntitySet Name="tbUsuarioDepartamento" EntityType="admin_reservasModel.tbUsuarioDepartamento" />
+          <EntitySet Name="tbUsuarioDepartamentoStatus" EntityType="admin_reservasModel.tbUsuarioDepartamentoStatus" />
+          <EntitySet Name="tbUsuarioExterno" EntityType="admin_reservasModel.tbUsuarioExterno" />
+          <EntitySet Name="tbUsuarioExternoStatus" EntityType="admin_reservasModel.tbUsuarioExternoStatus" />
+          <EntitySet Name="tbUsuarioExternoTipoPerfil" EntityType="admin_reservasModel.tbUsuarioExternoTipoPerfil" />
+          <EntitySet Name="tbUsuarioNivel" EntityType="admin_reservasModel.tbUsuarioNivel" />
+          <EntitySet Name="tbUsuarioNotificacao" EntityType="admin_reservasModel.tbUsuarioNotificacao" />
+          <EntitySet Name="tbUsuarioStatus" EntityType="admin_reservasModel.tbUsuarioStatus" />
+          <AssociationSet Name="FK_tbArtigoComentario_tbArtigo" Association="admin_reservasModel.FK_tbArtigoComentario_tbArtigo">
+            <End Role="tbArtigo" EntitySet="tbArtigo" />
+            <End Role="tbArtigoComentario" EntitySet="tbArtigoComentario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbArtigoCompartilhado_tbArtigo" Association="admin_reservasModel.FK_tbArtigoCompartilhado_tbArtigo">
+            <End Role="tbArtigo" EntitySet="tbArtigo" />
+            <End Role="tbArtigoCompartilhado" EntitySet="tbArtigoCompartilhado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbArtigoComentario_tbArtigoComentarioStatus" Association="admin_reservasModel.FK_tbArtigoComentario_tbArtigoComentarioStatus">
+            <End Role="tbArtigoComentarioStatus" EntitySet="tbArtigoComentarioStatus" />
+            <End Role="tbArtigoComentario" EntitySet="tbArtigoComentario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbArtigoComentario_tbUsuarioExterno" Association="admin_reservasModel.FK_tbArtigoComentario_tbUsuarioExterno">
+            <End Role="tbUsuarioExterno" EntitySet="tbUsuarioExterno" />
+            <End Role="tbArtigoComentario" EntitySet="tbArtigoComentario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbArtigoCompartilhado_tbUsuarioExterno" Association="admin_reservasModel.FK_tbArtigoCompartilhado_tbUsuarioExterno">
+            <End Role="tbUsuarioExterno" EntitySet="tbUsuarioExterno" />
+            <End Role="tbArtigoCompartilhado" EntitySet="tbArtigoCompartilhado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbHistorico_tbHistoricoTipo" Association="admin_reservasModel.FK_tbHistorico_tbHistoricoTipo">
+            <End Role="tbHistoricoTipo" EntitySet="tbHistoricoTipo" />
+            <End Role="tbHistorico" EntitySet="tbHistorico" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbHistorico_tbUsuario" Association="admin_reservasModel.FK_tbHistorico_tbUsuario">
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+            <End Role="tbHistorico" EntitySet="tbHistorico" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbNotificacao_tbNotificacaoAcao" Association="admin_reservasModel.FK_tbNotificacao_tbNotificacaoAcao">
+            <End Role="tbNotificacaoAcao" EntitySet="tbNotificacaoAcao" />
+            <End Role="tbNotificacao" EntitySet="tbNotificacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbNotificacao_tbNotificacaoAlvo" Association="admin_reservasModel.FK_tbNotificacao_tbNotificacaoAlvo">
+            <End Role="tbNotificacaoAlvo" EntitySet="tbNotificacaoAlvo" />
+            <End Role="tbNotificacao" EntitySet="tbNotificacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbNotificacao_tbNotificacaoTipo" Association="admin_reservasModel.FK_tbNotificacao_tbNotificacaoTipo">
+            <End Role="tbNotificacaoTipo" EntitySet="tbNotificacaoTipo" />
+            <End Role="tbNotificacao" EntitySet="tbNotificacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioNotificacao_tbNotificacao" Association="admin_reservasModel.FK_tbUsuarioNotificacao_tbNotificacao">
+            <End Role="tbNotificacao" EntitySet="tbNotificacao" />
+            <End Role="tbUsuarioNotificacao" EntitySet="tbUsuarioNotificacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPrato_tbPratoCategoria" Association="admin_reservasModel.FK_tbPrato_tbPratoCategoria">
+            <End Role="tbPratoCategoria" EntitySet="tbPratoCategoria" />
+            <End Role="tbPrato" EntitySet="tbPrato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPrato_tbPratoStatus" Association="admin_reservasModel.FK_tbPrato_tbPratoStatus">
+            <End Role="tbPratoStatus" EntitySet="tbPratoStatus" />
+            <End Role="tbPrato" EntitySet="tbPrato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPrato_tbUsuario" Association="admin_reservasModel.FK_tbPrato_tbUsuario">
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+            <End Role="tbPrato" EntitySet="tbPrato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPratoRestaurante_tbPrato" Association="admin_reservasModel.FK_tbPratoRestaurante_tbPrato">
+            <End Role="tbPrato" EntitySet="tbPrato" />
+            <End Role="tbPratoRestaurante" EntitySet="tbPratoRestaurante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPratoCategoria_tbPratoCategoriaStatus" Association="admin_reservasModel.FK_tbPratoCategoria_tbPratoCategoriaStatus">
+            <End Role="tbPratoCategoriaStatus" EntitySet="tbPratoCategoriaStatus" />
+            <End Role="tbPratoCategoria" EntitySet="tbPratoCategoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPratoRestaurante_tbRestaurante" Association="admin_reservasModel.FK_tbPratoRestaurante_tbRestaurante">
+            <End Role="tbRestaurante" EntitySet="tbRestaurante" />
+            <End Role="tbPratoRestaurante" EntitySet="tbPratoRestaurante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbReserva_tbReservaOrigem" Association="admin_reservasModel.FK_tbReserva_tbReservaOrigem">
+            <End Role="tbReservaOrigem" EntitySet="tbReservaOrigem" />
+            <End Role="tbReserva" EntitySet="tbReserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbReserva_tbReservaStatus" Association="admin_reservasModel.FK_tbReserva_tbReservaStatus">
+            <End Role="tbReservaStatus" EntitySet="tbReservaStatus" />
+            <End Role="tbReserva" EntitySet="tbReserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbReserva_tbRestaurante" Association="admin_reservasModel.FK_tbReserva_tbRestaurante">
+            <End Role="tbRestaurante" EntitySet="tbRestaurante" />
+            <End Role="tbReserva" EntitySet="tbReserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbReserva_tbUsuarioExterno" Association="admin_reservasModel.FK_tbReserva_tbUsuarioExterno">
+            <End Role="tbUsuarioExterno" EntitySet="tbUsuarioExterno" />
+            <End Role="tbReserva" EntitySet="tbReserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbRestaurante_tbRestauranteStatus" Association="admin_reservasModel.FK_tbRestaurante_tbRestauranteStatus">
+            <End Role="tbRestauranteStatus" EntitySet="tbRestauranteStatus" />
+            <End Role="tbRestaurante" EntitySet="tbRestaurante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbRestaurante_tbUsuario" Association="admin_reservasModel.FK_tbRestaurante_tbUsuario">
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+            <End Role="tbRestaurante" EntitySet="tbRestaurante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuario_tbUsuarioCargo" Association="admin_reservasModel.FK_tbUsuario_tbUsuarioCargo">
+            <End Role="tbUsuarioCargo" EntitySet="tbUsuarioCargo" />
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuario_tbUsuarioDepartamento" Association="admin_reservasModel.FK_tbUsuario_tbUsuarioDepartamento">
+            <End Role="tbUsuarioDepartamento" EntitySet="tbUsuarioDepartamento" />
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuario_tbUsuarioNivel" Association="admin_reservasModel.FK_tbUsuario_tbUsuarioNivel">
+            <End Role="tbUsuarioNivel" EntitySet="tbUsuarioNivel" />
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuario_tbUsuarioStatus" Association="admin_reservasModel.FK_tbUsuario_tbUsuarioStatus">
+            <End Role="tbUsuarioStatus" EntitySet="tbUsuarioStatus" />
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioNotificacao_tbUsuario" Association="admin_reservasModel.FK_tbUsuarioNotificacao_tbUsuario">
+            <End Role="tbUsuario" EntitySet="tbUsuario" />
+            <End Role="tbUsuarioNotificacao" EntitySet="tbUsuarioNotificacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioCargo_tbUsuarioCargoStatus" Association="admin_reservasModel.FK_tbUsuarioCargo_tbUsuarioCargoStatus">
+            <End Role="tbUsuarioCargoStatus" EntitySet="tbUsuarioCargoStatus" />
+            <End Role="tbUsuarioCargo" EntitySet="tbUsuarioCargo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioDepartamento_tbUsuarioDepartamentoStatus" Association="admin_reservasModel.FK_tbUsuarioDepartamento_tbUsuarioDepartamentoStatus">
+            <End Role="tbUsuarioDepartamentoStatus" EntitySet="tbUsuarioDepartamentoStatus" />
+            <End Role="tbUsuarioDepartamento" EntitySet="tbUsuarioDepartamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioExterno_tbUsuarioExternoStatus" Association="admin_reservasModel.FK_tbUsuarioExterno_tbUsuarioExternoStatus">
+            <End Role="tbUsuarioExternoStatus" EntitySet="tbUsuarioExternoStatus" />
+            <End Role="tbUsuarioExterno" EntitySet="tbUsuarioExterno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarioExterno_tbUsuarioExternoTipoPerfil" Association="admin_reservasModel.FK_tbUsuarioExterno_tbUsuarioExternoTipoPerfil">
+            <End Role="tbUsuarioExternoTipoPerfil" EntitySet="tbUsuarioExternoTipoPerfil" />
+            <End Role="tbUsuarioExterno" EntitySet="tbUsuarioExterno" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tbArtigo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="titulo" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="subtitulo" Type="String" Nullable="false" MaxLength="120" Unicode="false" FixedLength="false" />
+          <Property Name="imgThumb" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="conteudo" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="usuarioId" Type="Int32" Nullable="false" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+          <Property Name="categoriaId" Type="Int32" Nullable="false" />
+          <Property Name="dtCriacao" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="dtPublicacaoInicio" Type="DateTime" Precision="0" />
+          <Property Name="hrPublicacaoInicio" Type="Time" Precision="7" />
+          <Property Name="dtPublicacaoFim" Type="DateTime" Precision="0" />
+          <Property Name="hrPublicacaoFim" Type="Time" Precision="7" />
+          <Property Name="nomeAutor" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbArtigoComentario" Relationship="admin_reservasModel.FK_tbArtigoComentario_tbArtigo" FromRole="tbArtigo" ToRole="tbArtigoComentario" />
+          <NavigationProperty Name="tbArtigoCompartilhado" Relationship="admin_reservasModel.FK_tbArtigoCompartilhado_tbArtigo" FromRole="tbArtigo" ToRole="tbArtigoCompartilhado" />
+        </EntityType>
+        <EntityType Name="tbArtigoCategoria">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbArtigoCategoriaStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbArtigoComentario">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="artigoId" />
+            <PropertyRef Name="usuarioExternoId" />
+            <PropertyRef Name="statusId" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="comentario" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="artigoId" Type="Int32" Nullable="false" />
+          <Property Name="usuarioExternoId" Type="Int32" Nullable="false" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbArtigo" Relationship="admin_reservasModel.FK_tbArtigoComentario_tbArtigo" FromRole="tbArtigoComentario" ToRole="tbArtigo" />
+          <NavigationProperty Name="tbArtigoComentarioStatus" Relationship="admin_reservasModel.FK_tbArtigoComentario_tbArtigoComentarioStatus" FromRole="tbArtigoComentario" ToRole="tbArtigoComentarioStatus" />
+          <NavigationProperty Name="tbUsuarioExterno" Relationship="admin_reservasModel.FK_tbArtigoComentario_tbUsuarioExterno" FromRole="tbArtigoComentario" ToRole="tbUsuarioExterno" />
+        </EntityType>
+        <EntityType Name="tbArtigoComentarioStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbArtigoComentario" Relationship="admin_reservasModel.FK_tbArtigoComentario_tbArtigoComentarioStatus" FromRole="tbArtigoComentarioStatus" ToRole="tbArtigoComentario" />
+        </EntityType>
+        <EntityType Name="tbArtigoCompartilhado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ip" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="dtCompartilhado" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="artigoId" Type="Int32" Nullable="false" />
+          <Property Name="usuarioExternoId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbArtigo" Relationship="admin_reservasModel.FK_tbArtigoCompartilhado_tbArtigo" FromRole="tbArtigoCompartilhado" ToRole="tbArtigo" />
+          <NavigationProperty Name="tbUsuarioExterno" Relationship="admin_reservasModel.FK_tbArtigoCompartilhado_tbUsuarioExterno" FromRole="tbArtigoCompartilhado" ToRole="tbUsuarioExterno" />
+        </EntityType>
+        <EntityType Name="tbArtigoStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tbArtigoTags">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="artigoId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbHistorico">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="mensagem" Type="String" Nullable="false" MaxLength="120" Unicode="false" FixedLength="false" />
+          <Property Name="dataCriacao" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="tipoId" Type="Int32" Nullable="false" />
+          <Property Name="usuarioId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbHistoricoTipo" Relationship="admin_reservasModel.FK_tbHistorico_tbHistoricoTipo" FromRole="tbHistorico" ToRole="tbHistoricoTipo" />
+          <NavigationProperty Name="tbUsuario" Relationship="admin_reservasModel.FK_tbHistorico_tbUsuario" FromRole="tbHistorico" ToRole="tbUsuario" />
+        </EntityType>
+        <EntityType Name="tbHistoricoTipo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbHistorico" Relationship="admin_reservasModel.FK_tbHistorico_tbHistoricoTipo" FromRole="tbHistoricoTipo" ToRole="tbHistorico" />
+        </EntityType>
+        <EntityType Name="tbNotificacao">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="artigoId" Type="Int32" />
+          <Property Name="pratoId" Type="Int32" />
+          <Property Name="restauranteId" Type="Int32" />
+          <Property Name="usuarioId" Type="Int32" />
+          <Property Name="usuarioExternoId" Type="Int32" />
+          <Property Name="tipoId" Type="Int32" Nullable="false" />
+          <Property Name="acaoId" Type="Int32" Nullable="false" />
+          <Property Name="alvoId" Type="Int32" Nullable="false" />
+          <Property Name="mensagem" Type="String" Nullable="false" MaxLength="120" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbNotificacaoAcao" Relationship="admin_reservasModel.FK_tbNotificacao_tbNotificacaoAcao" FromRole="tbNotificacao" ToRole="tbNotificacaoAcao" />
+          <NavigationProperty Name="tbNotificacaoAlvo" Relationship="admin_reservasModel.FK_tbNotificacao_tbNotificacaoAlvo" FromRole="tbNotificacao" ToRole="tbNotificacaoAlvo" />
+          <NavigationProperty Name="tbNotificacaoTipo" Relationship="admin_reservasModel.FK_tbNotificacao_tbNotificacaoTipo" FromRole="tbNotificacao" ToRole="tbNotificacaoTipo" />
+          <NavigationProperty Name="tbUsuarioNotificacao" Relationship="admin_reservasModel.FK_tbUsuarioNotificacao_tbNotificacao" FromRole="tbNotificacao" ToRole="tbUsuarioNotificacao" />
+        </EntityType>
+        <EntityType Name="tbNotificacaoAcao">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbNotificacao" Relationship="admin_reservasModel.FK_tbNotificacao_tbNotificacaoAcao" FromRole="tbNotificacaoAcao" ToRole="tbNotificacao" />
+        </EntityType>
+        <EntityType Name="tbNotificacaoAlvo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbNotificacao" Relationship="admin_reservasModel.FK_tbNotificacao_tbNotificacaoAlvo" FromRole="tbNotificacaoAlvo" ToRole="tbNotificacao" />
+        </EntityType>
+        <EntityType Name="tbNotificacaoTipo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbNotificacao" Relationship="admin_reservasModel.FK_tbNotificacao_tbNotificacaoTipo" FromRole="tbNotificacaoTipo" ToRole="tbNotificacao" />
+        </EntityType>
+        <EntityType Name="tbPrato">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="titulo" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="120" Unicode="false" FixedLength="false" />
+          <Property Name="valor" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+          <Property Name="categoriaId" Type="Int32" Nullable="false" />
+          <Property Name="usuarioId" Type="Int32" Nullable="false" />
+          <Property Name="dtCriacao" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tbPratoCategoria" Relationship="admin_reservasModel.FK_tbPrato_tbPratoCategoria" FromRole="tbPrato" ToRole="tbPratoCategoria" />
+          <NavigationProperty Name="tbPratoStatus" Relationship="admin_reservasModel.FK_tbPrato_tbPratoStatus" FromRole="tbPrato" ToRole="tbPratoStatus" />
+          <NavigationProperty Name="tbUsuario" Relationship="admin_reservasModel.FK_tbPrato_tbUsuario" FromRole="tbPrato" ToRole="tbUsuario" />
+          <NavigationProperty Name="tbPratoRestaurante" Relationship="admin_reservasModel.FK_tbPratoRestaurante_tbPrato" FromRole="tbPrato" ToRole="tbPratoRestaurante" />
+        </EntityType>
+        <EntityType Name="tbPratoCategoria">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbPrato" Relationship="admin_reservasModel.FK_tbPrato_tbPratoCategoria" FromRole="tbPratoCategoria" ToRole="tbPrato" />
+          <NavigationProperty Name="tbPratoCategoriaStatus" Relationship="admin_reservasModel.FK_tbPratoCategoria_tbPratoCategoriaStatus" FromRole="tbPratoCategoria" ToRole="tbPratoCategoriaStatus" />
+        </EntityType>
+        <EntityType Name="tbPratoCategoriaStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbPratoCategoria" Relationship="admin_reservasModel.FK_tbPratoCategoria_tbPratoCategoriaStatus" FromRole="tbPratoCategoriaStatus" ToRole="tbPratoCategoria" />
+        </EntityType>
+        <EntityType Name="tbPratoRestaurante">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="pratoId" Type="Int32" Nullable="false" />
+          <Property Name="restauranteId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbPrato" Relationship="admin_reservasModel.FK_tbPratoRestaurante_tbPrato" FromRole="tbPratoRestaurante" ToRole="tbPrato" />
+          <NavigationProperty Name="tbRestaurante" Relationship="admin_reservasModel.FK_tbPratoRestaurante_tbRestaurante" FromRole="tbPratoRestaurante" ToRole="tbRestaurante" />
+        </EntityType>
+        <EntityType Name="tbPratoStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbPrato" Relationship="admin_reservasModel.FK_tbPrato_tbPratoStatus" FromRole="tbPratoStatus" ToRole="tbPrato" />
+        </EntityType>
+        <EntityType Name="tbReserva">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="dtCriacao" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="dataReserva" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="horaReserva" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="pessoasReserva" Type="Int32" Nullable="false" />
+          <Property Name="observacao" Type="String" MaxLength="120" Unicode="false" FixedLength="false" />
+          <Property Name="favoritado" Type="Boolean" Nullable="false" />
+          <Property Name="usuarioId" Type="Int32" />
+          <Property Name="restauranteId" Type="Int32" Nullable="false" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+          <Property Name="origemId" Type="Int32" Nullable="false" />
+          <Property Name="usuarioExternoId" Type="Int32" Nullable="false" />
+          <Property Name="efetuado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbReservaOrigem" Relationship="admin_reservasModel.FK_tbReserva_tbReservaOrigem" FromRole="tbReserva" ToRole="tbReservaOrigem" />
+          <NavigationProperty Name="tbReservaStatus" Relationship="admin_reservasModel.FK_tbReserva_tbReservaStatus" FromRole="tbReserva" ToRole="tbReservaStatus" />
+          <NavigationProperty Name="tbRestaurante" Relationship="admin_reservasModel.FK_tbReserva_tbRestaurante" FromRole="tbReserva" ToRole="tbRestaurante" />
+          <NavigationProperty Name="tbUsuarioExterno" Relationship="admin_reservasModel.FK_tbReserva_tbUsuarioExterno" FromRole="tbReserva" ToRole="tbUsuarioExterno" />
+        </EntityType>
+        <EntityType Name="tbReservaOrigem">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbReserva" Relationship="admin_reservasModel.FK_tbReserva_tbReservaOrigem" FromRole="tbReservaOrigem" ToRole="tbReserva" />
+        </EntityType>
+        <EntityType Name="tbReservaStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbReserva" Relationship="admin_reservasModel.FK_tbReserva_tbReservaStatus" FromRole="tbReservaStatus" ToRole="tbReserva" />
+        </EntityType>
+        <EntityType Name="tbRestaurante">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="endereco" Type="String" MaxLength="120" Unicode="false" FixedLength="false" />
+          <Property Name="dtCadastro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="usuarioId" Type="Int32" Nullable="false" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbPratoRestaurante" Relationship="admin_reservasModel.FK_tbPratoRestaurante_tbRestaurante" FromRole="tbRestaurante" ToRole="tbPratoRestaurante" />
+          <NavigationProperty Name="tbReserva" Relationship="admin_reservasModel.FK_tbReserva_tbRestaurante" FromRole="tbRestaurante" ToRole="tbReserva" />
+          <NavigationProperty Name="tbRestauranteStatus" Relationship="admin_reservasModel.FK_tbRestaurante_tbRestauranteStatus" FromRole="tbRestaurante" ToRole="tbRestauranteStatus" />
+          <NavigationProperty Name="tbUsuario" Relationship="admin_reservasModel.FK_tbRestaurante_tbUsuario" FromRole="tbRestaurante" ToRole="tbUsuario" />
+        </EntityType>
+        <EntityType Name="tbRestauranteStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbRestaurante" Relationship="admin_reservasModel.FK_tbRestaurante_tbRestauranteStatus" FromRole="tbRestauranteStatus" ToRole="tbRestaurante" />
+        </EntityType>
+        <EntityType Name="tbUsuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="120" Unicode="false" FixedLength="false" />
+          <Property Name="senha" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="restauranteId" Type="Int32" Nullable="false" />
+          <Property Name="departamentoId" Type="Int32" Nullable="false" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+          <Property Name="nivelId" Type="Int32" Nullable="false" />
+          <Property Name="cargoId" Type="Int32" Nullable="false" />
+          <Property Name="usuarioId" Type="Int32" />
+          <Property Name="sobre" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="caminhoFoto" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbHistorico" Relationship="admin_reservasModel.FK_tbHistorico_tbUsuario" FromRole="tbUsuario" ToRole="tbHistorico" />
+          <NavigationProperty Name="tbPrato" Relationship="admin_reservasModel.FK_tbPrato_tbUsuario" FromRole="tbUsuario" ToRole="tbPrato" />
+          <NavigationProperty Name="tbRestaurante" Relationship="admin_reservasModel.FK_tbRestaurante_tbUsuario" FromRole="tbUsuario" ToRole="tbRestaurante" />
+          <NavigationProperty Name="tbUsuarioCargo" Relationship="admin_reservasModel.FK_tbUsuario_tbUsuarioCargo" FromRole="tbUsuario" ToRole="tbUsuarioCargo" />
+          <NavigationProperty Name="tbUsuarioDepartamento" Relationship="admin_reservasModel.FK_tbUsuario_tbUsuarioDepartamento" FromRole="tbUsuario" ToRole="tbUsuarioDepartamento" />
+          <NavigationProperty Name="tbUsuarioNivel" Relationship="admin_reservasModel.FK_tbUsuario_tbUsuarioNivel" FromRole="tbUsuario" ToRole="tbUsuarioNivel" />
+          <NavigationProperty Name="tbUsuarioStatus" Relationship="admin_reservasModel.FK_tbUsuario_tbUsuarioStatus" FromRole="tbUsuario" ToRole="tbUsuarioStatus" />
+          <NavigationProperty Name="tbUsuarioNotificacao" Relationship="admin_reservasModel.FK_tbUsuarioNotificacao_tbUsuario" FromRole="tbUsuario" ToRole="tbUsuarioNotificacao" />
+        </EntityType>
+        <EntityType Name="tbUsuarioCargo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbUsuario" Relationship="admin_reservasModel.FK_tbUsuario_tbUsuarioCargo" FromRole="tbUsuarioCargo" ToRole="tbUsuario" />
+          <NavigationProperty Name="tbUsuarioCargoStatus" Relationship="admin_reservasModel.FK_tbUsuarioCargo_tbUsuarioCargoStatus" FromRole="tbUsuarioCargo" ToRole="tbUsuarioCargoStatus" />
+        </EntityType>
+        <EntityType Name="tbUsuarioCargoStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbUsuarioCargo" Relationship="admin_reservasModel.FK_tbUsuarioCargo_tbUsuarioCargoStatus" FromRole="tbUsuarioCargoStatus" ToRole="tbUsuarioCargo" />
+        </EntityType>
+        <EntityType Name="tbUsuarioDepartamento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbUsuario" Relationship="admin_reservasModel.FK_tbUsuario_tbUsuarioDepartamento" FromRole="tbUsuarioDepartamento" ToRole="tbUsuario" />
+          <NavigationProperty Name="tbUsuarioDepartamentoStatus" Relationship="admin_reservasModel.FK_tbUsuarioDepartamento_tbUsuarioDepartamentoStatus" FromRole="tbUsuarioDepartamento" ToRole="tbUsuarioDepartamentoStatus" />
+        </EntityType>
+        <EntityType Name="tbUsuarioDepartamentoStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbUsuarioDepartamento" Relationship="admin_reservasModel.FK_tbUsuarioDepartamento_tbUsuarioDepartamentoStatus" FromRole="tbUsuarioDepartamentoStatus" ToRole="tbUsuarioDepartamento" />
+        </EntityType>
+        <EntityType Name="tbUsuarioExterno">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="120" Unicode="false" FixedLength="false" />
+          <Property Name="celular" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="telefone" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="tipoPerfilId" Type="Int32" Nullable="false" />
+          <Property Name="statusId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbArtigoComentario" Relationship="admin_reservasModel.FK_tbArtigoComentario_tbUsuarioExterno" FromRole="tbUsuarioExterno" ToRole="tbArtigoComentario" />
+          <NavigationProperty Name="tbArtigoCompartilhado" Relationship="admin_reservasModel.FK_tbArtigoCompartilhado_tbUsuarioExterno" FromRole="tbUsuarioExterno" ToRole="tbArtigoCompartilhado" />
+          <NavigationProperty Name="tbReserva" Relationship="admin_reservasModel.FK_tbReserva_tbUsuarioExterno" FromRole="tbUsuarioExterno" ToRole="tbReserva" />
+          <NavigationProperty Name="tbUsuarioExternoStatus" Relationship="admin_reservasModel.FK_tbUsuarioExterno_tbUsuarioExternoStatus" FromRole="tbUsuarioExterno" ToRole="tbUsuarioExternoStatus" />
+          <NavigationProperty Name="tbUsuarioExternoTipoPerfil" Relationship="admin_reservasModel.FK_tbUsuarioExterno_tbUsuarioExternoTipoPerfil" FromRole="tbUsuarioExterno" ToRole="tbUsuarioExternoTipoPerfil" />
+        </EntityType>
+        <EntityType Name="tbUsuarioExternoStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbUsuarioExterno" Relationship="admin_reservasModel.FK_tbUsuarioExterno_tbUsuarioExternoStatus" FromRole="tbUsuarioExternoStatus" ToRole="tbUsuarioExterno" />
+        </EntityType>
+        <EntityType Name="tbUsuarioExternoTipoPerfil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbUsuarioExterno" Relationship="admin_reservasModel.FK_tbUsuarioExterno_tbUsuarioExternoTipoPerfil" FromRole="tbUsuarioExternoTipoPerfil" ToRole="tbUsuarioExterno" />
+        </EntityType>
+        <EntityType Name="tbUsuarioNivel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbUsuario" Relationship="admin_reservasModel.FK_tbUsuario_tbUsuarioNivel" FromRole="tbUsuarioNivel" ToRole="tbUsuario" />
+        </EntityType>
+        <EntityType Name="tbUsuarioNotificacao">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="usuarioId" />
+            <PropertyRef Name="notificacaoId" />
+            <PropertyRef Name="notificacaoLido" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="usuarioId" Type="Int32" Nullable="false" />
+          <Property Name="notificacaoId" Type="Int32" Nullable="false" />
+          <Property Name="notificacaoLido" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbNotificacao" Relationship="admin_reservasModel.FK_tbUsuarioNotificacao_tbNotificacao" FromRole="tbUsuarioNotificacao" ToRole="tbNotificacao" />
+          <NavigationProperty Name="tbUsuario" Relationship="admin_reservasModel.FK_tbUsuarioNotificacao_tbUsuario" FromRole="tbUsuarioNotificacao" ToRole="tbUsuario" />
+        </EntityType>
+        <EntityType Name="tbUsuarioStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbUsuario" Relationship="admin_reservasModel.FK_tbUsuario_tbUsuarioStatus" FromRole="tbUsuarioStatus" ToRole="tbUsuario" />
+        </EntityType>
+        <Association Name="FK_tbArtigoComentario_tbArtigo">
+          <End Role="tbArtigo" Type="admin_reservasModel.tbArtigo" Multiplicity="1" />
+          <End Role="tbArtigoComentario" Type="admin_reservasModel.tbArtigoComentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbArtigo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbArtigoComentario">
+              <PropertyRef Name="artigoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbArtigoCompartilhado_tbArtigo">
+          <End Role="tbArtigo" Type="admin_reservasModel.tbArtigo" Multiplicity="1" />
+          <End Role="tbArtigoCompartilhado" Type="admin_reservasModel.tbArtigoCompartilhado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbArtigo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbArtigoCompartilhado">
+              <PropertyRef Name="artigoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbArtigoComentario_tbArtigoComentarioStatus">
+          <End Role="tbArtigoComentarioStatus" Type="admin_reservasModel.tbArtigoComentarioStatus" Multiplicity="1" />
+          <End Role="tbArtigoComentario" Type="admin_reservasModel.tbArtigoComentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbArtigoComentarioStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbArtigoComentario">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbArtigoComentario_tbUsuarioExterno">
+          <End Role="tbUsuarioExterno" Type="admin_reservasModel.tbUsuarioExterno" Multiplicity="1" />
+          <End Role="tbArtigoComentario" Type="admin_reservasModel.tbArtigoComentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioExterno">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbArtigoComentario">
+              <PropertyRef Name="usuarioExternoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbArtigoCompartilhado_tbUsuarioExterno">
+          <End Role="tbUsuarioExterno" Type="admin_reservasModel.tbUsuarioExterno" Multiplicity="1" />
+          <End Role="tbArtigoCompartilhado" Type="admin_reservasModel.tbArtigoCompartilhado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioExterno">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbArtigoCompartilhado">
+              <PropertyRef Name="usuarioExternoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbHistorico_tbHistoricoTipo">
+          <End Role="tbHistoricoTipo" Type="admin_reservasModel.tbHistoricoTipo" Multiplicity="1" />
+          <End Role="tbHistorico" Type="admin_reservasModel.tbHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbHistoricoTipo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbHistorico">
+              <PropertyRef Name="tipoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbHistorico_tbUsuario">
+          <End Role="tbUsuario" Type="admin_reservasModel.tbUsuario" Multiplicity="1" />
+          <End Role="tbHistorico" Type="admin_reservasModel.tbHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbHistorico">
+              <PropertyRef Name="usuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbNotificacao_tbNotificacaoAcao">
+          <End Role="tbNotificacaoAcao" Type="admin_reservasModel.tbNotificacaoAcao" Multiplicity="1" />
+          <End Role="tbNotificacao" Type="admin_reservasModel.tbNotificacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbNotificacaoAcao">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbNotificacao">
+              <PropertyRef Name="acaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbNotificacao_tbNotificacaoAlvo">
+          <End Role="tbNotificacaoAlvo" Type="admin_reservasModel.tbNotificacaoAlvo" Multiplicity="1" />
+          <End Role="tbNotificacao" Type="admin_reservasModel.tbNotificacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbNotificacaoAlvo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbNotificacao">
+              <PropertyRef Name="alvoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbNotificacao_tbNotificacaoTipo">
+          <End Role="tbNotificacaoTipo" Type="admin_reservasModel.tbNotificacaoTipo" Multiplicity="1" />
+          <End Role="tbNotificacao" Type="admin_reservasModel.tbNotificacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbNotificacaoTipo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbNotificacao">
+              <PropertyRef Name="tipoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioNotificacao_tbNotificacao">
+          <End Role="tbNotificacao" Type="admin_reservasModel.tbNotificacao" Multiplicity="1" />
+          <End Role="tbUsuarioNotificacao" Type="admin_reservasModel.tbUsuarioNotificacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbNotificacao">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioNotificacao">
+              <PropertyRef Name="notificacaoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPrato_tbPratoCategoria">
+          <End Role="tbPratoCategoria" Type="admin_reservasModel.tbPratoCategoria" Multiplicity="1" />
+          <End Role="tbPrato" Type="admin_reservasModel.tbPrato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbPratoCategoria">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPrato">
+              <PropertyRef Name="categoriaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPrato_tbPratoStatus">
+          <End Role="tbPratoStatus" Type="admin_reservasModel.tbPratoStatus" Multiplicity="1" />
+          <End Role="tbPrato" Type="admin_reservasModel.tbPrato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbPratoStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPrato">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPrato_tbUsuario">
+          <End Role="tbUsuario" Type="admin_reservasModel.tbUsuario" Multiplicity="1" />
+          <End Role="tbPrato" Type="admin_reservasModel.tbPrato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPrato">
+              <PropertyRef Name="usuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPratoRestaurante_tbPrato">
+          <End Role="tbPrato" Type="admin_reservasModel.tbPrato" Multiplicity="1" />
+          <End Role="tbPratoRestaurante" Type="admin_reservasModel.tbPratoRestaurante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbPrato">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPratoRestaurante">
+              <PropertyRef Name="pratoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPratoCategoria_tbPratoCategoriaStatus">
+          <End Role="tbPratoCategoriaStatus" Type="admin_reservasModel.tbPratoCategoriaStatus" Multiplicity="1" />
+          <End Role="tbPratoCategoria" Type="admin_reservasModel.tbPratoCategoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbPratoCategoriaStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPratoCategoria">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPratoRestaurante_tbRestaurante">
+          <End Role="tbRestaurante" Type="admin_reservasModel.tbRestaurante" Multiplicity="1" />
+          <End Role="tbPratoRestaurante" Type="admin_reservasModel.tbPratoRestaurante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbRestaurante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbPratoRestaurante">
+              <PropertyRef Name="restauranteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbReserva_tbReservaOrigem">
+          <End Role="tbReservaOrigem" Type="admin_reservasModel.tbReservaOrigem" Multiplicity="1" />
+          <End Role="tbReserva" Type="admin_reservasModel.tbReserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbReservaOrigem">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReserva">
+              <PropertyRef Name="origemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbReserva_tbReservaStatus">
+          <End Role="tbReservaStatus" Type="admin_reservasModel.tbReservaStatus" Multiplicity="1" />
+          <End Role="tbReserva" Type="admin_reservasModel.tbReserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbReservaStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReserva">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbReserva_tbRestaurante">
+          <End Role="tbRestaurante" Type="admin_reservasModel.tbRestaurante" Multiplicity="1" />
+          <End Role="tbReserva" Type="admin_reservasModel.tbReserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbRestaurante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReserva">
+              <PropertyRef Name="restauranteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbReserva_tbUsuarioExterno">
+          <End Role="tbUsuarioExterno" Type="admin_reservasModel.tbUsuarioExterno" Multiplicity="1" />
+          <End Role="tbReserva" Type="admin_reservasModel.tbReserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioExterno">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbReserva">
+              <PropertyRef Name="usuarioExternoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbRestaurante_tbRestauranteStatus">
+          <End Role="tbRestauranteStatus" Type="admin_reservasModel.tbRestauranteStatus" Multiplicity="1" />
+          <End Role="tbRestaurante" Type="admin_reservasModel.tbRestaurante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbRestauranteStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbRestaurante">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbRestaurante_tbUsuario">
+          <End Role="tbUsuario" Type="admin_reservasModel.tbUsuario" Multiplicity="1" />
+          <End Role="tbRestaurante" Type="admin_reservasModel.tbRestaurante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbRestaurante">
+              <PropertyRef Name="usuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuario_tbUsuarioCargo">
+          <End Role="tbUsuarioCargo" Type="admin_reservasModel.tbUsuarioCargo" Multiplicity="1" />
+          <End Role="tbUsuario" Type="admin_reservasModel.tbUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioCargo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuario">
+              <PropertyRef Name="cargoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuario_tbUsuarioDepartamento">
+          <End Role="tbUsuarioDepartamento" Type="admin_reservasModel.tbUsuarioDepartamento" Multiplicity="1" />
+          <End Role="tbUsuario" Type="admin_reservasModel.tbUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioDepartamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuario">
+              <PropertyRef Name="departamentoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuario_tbUsuarioNivel">
+          <End Role="tbUsuarioNivel" Type="admin_reservasModel.tbUsuarioNivel" Multiplicity="1" />
+          <End Role="tbUsuario" Type="admin_reservasModel.tbUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioNivel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuario">
+              <PropertyRef Name="nivelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuario_tbUsuarioStatus">
+          <End Role="tbUsuarioStatus" Type="admin_reservasModel.tbUsuarioStatus" Multiplicity="1" />
+          <End Role="tbUsuario" Type="admin_reservasModel.tbUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuario">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioNotificacao_tbUsuario">
+          <End Role="tbUsuario" Type="admin_reservasModel.tbUsuario" Multiplicity="1" />
+          <End Role="tbUsuarioNotificacao" Type="admin_reservasModel.tbUsuarioNotificacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioNotificacao">
+              <PropertyRef Name="usuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioCargo_tbUsuarioCargoStatus">
+          <End Role="tbUsuarioCargoStatus" Type="admin_reservasModel.tbUsuarioCargoStatus" Multiplicity="1" />
+          <End Role="tbUsuarioCargo" Type="admin_reservasModel.tbUsuarioCargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioCargoStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioCargo">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioDepartamento_tbUsuarioDepartamentoStatus">
+          <End Role="tbUsuarioDepartamentoStatus" Type="admin_reservasModel.tbUsuarioDepartamentoStatus" Multiplicity="1" />
+          <End Role="tbUsuarioDepartamento" Type="admin_reservasModel.tbUsuarioDepartamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioDepartamentoStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioDepartamento">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioExterno_tbUsuarioExternoStatus">
+          <End Role="tbUsuarioExternoStatus" Type="admin_reservasModel.tbUsuarioExternoStatus" Multiplicity="1" />
+          <End Role="tbUsuarioExterno" Type="admin_reservasModel.tbUsuarioExterno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioExternoStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioExterno">
+              <PropertyRef Name="statusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarioExterno_tbUsuarioExternoTipoPerfil">
+          <End Role="tbUsuarioExternoTipoPerfil" Type="admin_reservasModel.tbUsuarioExternoTipoPerfil" Multiplicity="1" />
+          <End Role="tbUsuarioExterno" Type="admin_reservasModel.tbUsuarioExterno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbUsuarioExternoTipoPerfil">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbUsuarioExterno">
+              <PropertyRef Name="tipoPerfilId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="admin_reservasModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="tbArtigo">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbArtigo">
+              <MappingFragment StoreEntitySet="tbArtigo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="titulo" ColumnName="titulo" />
+                <ScalarProperty Name="subtitulo" ColumnName="subtitulo" />
+                <ScalarProperty Name="imgThumb" ColumnName="imgThumb" />
+                <ScalarProperty Name="conteudo" ColumnName="conteudo" />
+                <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+                <ScalarProperty Name="categoriaId" ColumnName="categoriaId" />
+                <ScalarProperty Name="dtCriacao" ColumnName="dtCriacao" />
+                <ScalarProperty Name="dtPublicacaoInicio" ColumnName="dtPublicacaoInicio" />
+                <ScalarProperty Name="hrPublicacaoInicio" ColumnName="hrPublicacaoInicio" />
+                <ScalarProperty Name="dtPublicacaoFim" ColumnName="dtPublicacaoFim" />
+                <ScalarProperty Name="hrPublicacaoFim" ColumnName="hrPublicacaoFim" />
+                <ScalarProperty Name="nomeAutor" ColumnName="nomeAutor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbArtigoCategoria">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoCategoria">
+              <MappingFragment StoreEntitySet="tbArtigoCategoria">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbArtigoCategoriaStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoCategoriaStatus">
+              <MappingFragment StoreEntitySet="tbArtigoCategoriaStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbArtigoComentario">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoComentario">
+              <MappingFragment StoreEntitySet="tbArtigoComentario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="comentario" ColumnName="comentario" />
+                <ScalarProperty Name="artigoId" ColumnName="artigoId" />
+                <ScalarProperty Name="usuarioExternoId" ColumnName="usuarioExternoId" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbArtigoComentarioStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoComentarioStatus">
+              <MappingFragment StoreEntitySet="tbArtigoComentarioStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbArtigoCompartilhado">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoCompartilhado">
+              <MappingFragment StoreEntitySet="tbArtigoCompartilhado">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="dtCompartilhado" ColumnName="dtCompartilhado" />
+                <ScalarProperty Name="artigoId" ColumnName="artigoId" />
+                <ScalarProperty Name="usuarioExternoId" ColumnName="usuarioExternoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbArtigoStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoStatus">
+              <MappingFragment StoreEntitySet="tbArtigoStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbArtigoTags">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbArtigoTags">
+              <MappingFragment StoreEntitySet="tbArtigoTags">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="artigoId" ColumnName="artigoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbHistorico">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbHistorico">
+              <MappingFragment StoreEntitySet="tbHistorico">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="mensagem" ColumnName="mensagem" />
+                <ScalarProperty Name="dataCriacao" ColumnName="dataCriacao" />
+                <ScalarProperty Name="tipoId" ColumnName="tipoId" />
+                <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbHistoricoTipo">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbHistoricoTipo">
+              <MappingFragment StoreEntitySet="tbHistoricoTipo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbNotificacao">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbNotificacao">
+              <MappingFragment StoreEntitySet="tbNotificacao">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="artigoId" ColumnName="artigoId" />
+                <ScalarProperty Name="pratoId" ColumnName="pratoId" />
+                <ScalarProperty Name="restauranteId" ColumnName="restauranteId" />
+                <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+                <ScalarProperty Name="usuarioExternoId" ColumnName="usuarioExternoId" />
+                <ScalarProperty Name="tipoId" ColumnName="tipoId" />
+                <ScalarProperty Name="acaoId" ColumnName="acaoId" />
+                <ScalarProperty Name="alvoId" ColumnName="alvoId" />
+                <ScalarProperty Name="mensagem" ColumnName="mensagem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbNotificacaoAcao">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbNotificacaoAcao">
+              <MappingFragment StoreEntitySet="tbNotificacaoAcao">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbNotificacaoAlvo">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbNotificacaoAlvo">
+              <MappingFragment StoreEntitySet="tbNotificacaoAlvo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbNotificacaoTipo">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbNotificacaoTipo">
+              <MappingFragment StoreEntitySet="tbNotificacaoTipo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbPrato">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbPrato">
+              <MappingFragment StoreEntitySet="tbPrato">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="titulo" ColumnName="titulo" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+                <ScalarProperty Name="categoriaId" ColumnName="categoriaId" />
+                <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+                <ScalarProperty Name="dtCriacao" ColumnName="dtCriacao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbPratoCategoria">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbPratoCategoria">
+              <MappingFragment StoreEntitySet="tbPratoCategoria">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbPratoCategoriaStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbPratoCategoriaStatus">
+              <MappingFragment StoreEntitySet="tbPratoCategoriaStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbPratoRestaurante">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbPratoRestaurante">
+              <MappingFragment StoreEntitySet="tbPratoRestaurante">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pratoId" ColumnName="pratoId" />
+                <ScalarProperty Name="restauranteId" ColumnName="restauranteId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbPratoStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbPratoStatus">
+              <MappingFragment StoreEntitySet="tbPratoStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbReserva">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbReserva">
+              <MappingFragment StoreEntitySet="tbReserva">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="dtCriacao" ColumnName="dtCriacao" />
+                <ScalarProperty Name="dataReserva" ColumnName="dataReserva" />
+                <ScalarProperty Name="horaReserva" ColumnName="horaReserva" />
+                <ScalarProperty Name="pessoasReserva" ColumnName="pessoasReserva" />
+                <ScalarProperty Name="observacao" ColumnName="observacao" />
+                <ScalarProperty Name="favoritado" ColumnName="favoritado" />
+                <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+                <ScalarProperty Name="restauranteId" ColumnName="restauranteId" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+                <ScalarProperty Name="origemId" ColumnName="origemId" />
+                <ScalarProperty Name="usuarioExternoId" ColumnName="usuarioExternoId" />
+                <ScalarProperty Name="efetuado" ColumnName="efetuado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbReservaOrigem">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbReservaOrigem">
+              <MappingFragment StoreEntitySet="tbReservaOrigem">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbReservaStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbReservaStatus">
+              <MappingFragment StoreEntitySet="tbReservaStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbRestaurante">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbRestaurante">
+              <MappingFragment StoreEntitySet="tbRestaurante">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="endereco" ColumnName="endereco" />
+                <ScalarProperty Name="dtCadastro" ColumnName="dtCadastro" />
+                <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbRestauranteStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbRestauranteStatus">
+              <MappingFragment StoreEntitySet="tbRestauranteStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuario">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuario">
+              <MappingFragment StoreEntitySet="tbUsuario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="senha" ColumnName="senha" />
+                <ScalarProperty Name="restauranteId" ColumnName="restauranteId" />
+                <ScalarProperty Name="departamentoId" ColumnName="departamentoId" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+                <ScalarProperty Name="nivelId" ColumnName="nivelId" />
+                <ScalarProperty Name="cargoId" ColumnName="cargoId" />
+                <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+                <ScalarProperty Name="sobre" ColumnName="sobre" />
+                <ScalarProperty Name="caminhoFoto" ColumnName="caminhoFoto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarioCargo">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioCargo">
+              <MappingFragment StoreEntitySet="tbUsuarioCargo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarioCargoStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioCargoStatus">
+              <MappingFragment StoreEntitySet="tbUsuarioCargoStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarioDepartamento">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioDepartamento">
+              <MappingFragment StoreEntitySet="tbUsuarioDepartamento">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarioDepartamentoStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioDepartamentoStatus">
+              <MappingFragment StoreEntitySet="tbUsuarioDepartamentoStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarioExterno">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioExterno">
+              <MappingFragment StoreEntitySet="tbUsuarioExterno">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="tipoPerfilId" ColumnName="tipoPerfilId" />
+                <ScalarProperty Name="statusId" ColumnName="statusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarioExternoStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioExternoStatus">
+              <MappingFragment StoreEntitySet="tbUsuarioExternoStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarioExternoTipoPerfil">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioExternoTipoPerfil">
+              <MappingFragment StoreEntitySet="tbUsuarioExternoTipoPerfil">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarioNivel">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioNivel">
+              <MappingFragment StoreEntitySet="tbUsuarioNivel">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarioNotificacao">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioNotificacao">
+              <MappingFragment StoreEntitySet="tbUsuarioNotificacao">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuarioId" ColumnName="usuarioId" />
+                <ScalarProperty Name="notificacaoId" ColumnName="notificacaoId" />
+                <ScalarProperty Name="notificacaoLido" ColumnName="notificacaoLido" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarioStatus">
+            <EntityTypeMapping TypeName="admin_reservasModel.tbUsuarioStatus">
+              <MappingFragment StoreEntitySet="tbUsuarioStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

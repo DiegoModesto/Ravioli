@@ -1,0 +1,280 @@
+﻿@model Ravioli.Web.UI.Areas.Dashboard.Models.Usuario
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bem Vindo | @ViewBag.NomeUsuario | Dashboard Martin Luz</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/Scripts/js")
+</head>
+<body>
+    @{
+        Html.RenderPartial("_MenuSuperior", Model);
+    }
+    @{
+        Html.RenderPartial("_MenuEsquerdo", Model);
+    }
+    <div class="row col-lg-11 dash-estatisticas">
+        <div class="dash-dados visitas">
+            <b>Estatística</b>
+            <p>
+                <b>@Model.Dados.NmVisitas</b>
+                <b>Visitas no Site</b>
+            </p>
+        </div>
+        <div class="dash-dados reservas">
+            <b>Estatística</b>
+            <p>
+                <b>@Model.Dados.NmReservas</b>
+                <b>Reservas Feitas</b>
+            </p>
+        </div>
+        <div class="dash-dados blog">
+            <b>Estatística</b>
+            <p>
+                <b>@Model.Dados.NmComentario</b>
+                <b>Comentários no Blog</b>
+            </p>
+        </div>
+        <div class="dash-dados cardapio">
+            <b>Estatística</b>
+            <p>
+                <b>@Model.Dados.NmCardapio</b>
+                <b>Itens no Cardápio</b>
+            </p>
+        </div>
+    </div>
+    <div class="row dash-listas">
+        <div class="col-lg-6 dash-lista-reserva">
+            <ul class="nav nav-tabs" data-toggle="navtab" id="ReservaBlog">
+                <li class="active">
+                    <a href="#reservas" class="no-radius">Reservas</a>
+                </li>
+                <li>
+                    <a href="#blog" class="no-radius">Blog</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="reservas">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Data</td>
+                                <td>Nome</td>
+                                <td>Pessoas</td>
+                                <td>Horário</td>
+                                <td colspan="2">Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var x in Model.ListaReservas)
+                            {
+                                <tr>
+                                    <td>@x.Data</td>
+                                    <td>@x.Nome</td>
+                                    <td>@x.Pessoas</td>
+                                    <td>@x.Hora</td>
+                                    <td class="@x.ClasseStatus">@x.Status</td>
+                                    <td>
+                                        <a data-container="body" data-toggle="popover" data-placement="top" class="config me-popover" data-content="<div><a href='Admin/Reserva/Novo' class='novo'><b>+</b>Novo</a><a href='Admin/Reserva/Editar/@x.Id' class='editar'><b>e</b>Editar</a></div>">Config.</a>
+                                        <a href="/Admin/Reserva/Excluir/@x.Id" class="excluir" data-toggle="tooltip" data-placement="top" data-original-title="Excluir reserva de @x.Nome?">Excluir</a>
+                                    </td>
+                                </tr>
+                            }
+                            @if (Model.ListaReservas.Count < 5)
+                            {
+                                for (int i = 0; i < (5 - Model.ListaReservas.Count); i++)
+                                {
+                                <tr>
+                                    <td colspan="6">&nbsp;</td>
+                                </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane" id="blog">
+                    <table class="table table-striped-inverse lista-blog">
+                        <tbody>
+                            @foreach (var x in Model.ListaBlog)
+                            {
+                                <tr>
+                                    <td colspan="6">
+                                        <b>Blog</b>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="6">@x.Titulo</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        @if (x.DataPublicacao != null)
+                                                        {
+                                                            @x.DataPublicacao
+                                                        }
+                                                        else
+                                                        {
+                                                            @: &nbsp;
+                                                         }
+                                                    </td>
+                                                    <td>
+                                                        @if (x.NomeAutor == null)
+                                                        {
+                                                            @x.NomeUsuario
+                                                        }
+                                                        else
+                                                        {
+                                                            @x.NomeAutor
+                                                        }
+                                                    </td>
+                                                    <td>
+                                                        @if (x.QtdComentarios > 0)
+                                                        {
+                                                            @: x.QtdComentarios comentários
+                                                        }
+                                                        else
+                                                        {
+                                                            @: Nenhum Comentário
+                                                        }
+                                                    </td>
+                                                    <td>
+                                                        @if (x.QtdCompartilhados > 0)
+                                                        {
+                                                            @: x.QtdCompartilhados compartilhados
+                                                        }
+                                                        else
+                                                        {
+                                                            @: Nenhum Compartilhamento
+                                                        }
+                                                    </td>
+                                                    <td>
+                                                        <a class="config me-popover" data-container="body" data-toggle="popover" data-placement="top" data-content="<div><a href='Admin/Blog/Post/Novo' class='novo'><b>+</b>Novo</a><a href='Admin/Blog/Post/Editar/@x.Id' class='editar'><b>e</b>Editar</a></div>">Config.</a>
+                                                        <a class="excluir me-popover" data-toggle="tooltip" data-placement="top" data-original-title="Excluir artigo @x.Titulo.">Excluir</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            }
+                            @if (Model.ListaBlog.Count < 5)
+                            {
+                                for (int i = 0; i < (5 - Model.ListaBlog.Count); i++)
+                                {
+                                <tr>
+                                    <td colspan="6">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="6">&nbsp;</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 dash-lista-informativo">
+            <ul class="nav nav-tabs nav-tabs-alone" data-toggle="navtab" id="notificacao">
+                <li class="active">
+                    <a href="#reservas" class="no-radius">Notificações</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="Informativo">
+                    <table class="table table-striped-inverse lista-informativo">
+                        <tbody>
+                            <tr>
+                                <td width="70%">
+                                    <b class="blog">Blog</b>
+                                    Novo usuário registrado
+                                </td>
+                                <td width="15%">
+                                    15/11/2013
+                                </td>
+                                <td width="15%">
+                                    <a href="#" class="excluir" data-toggle="tooltip" data-placement="top" data-original-title="Excluir informativo">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="70%">
+                                    <b class="notfy">Notificacao</b>
+                                    Novo usuário registrado
+                                </td>
+                                <td width="15%">
+                                    15/11/2013
+                                </td>
+                                <td width="15%">
+                                    <a href="#" class="excluir" data-toggle="tooltip" data-placement="top" data-original-title="Excluir informativo">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="70%">
+                                    <b class="notfy">Notificacao</b>
+                                    Novo usuário registrado
+                                </td>
+                                <td width="15%">
+                                    15/11/2013
+                                </td>
+                                <td width="15%">
+                                    <a href="#" class="excluir" data-toggle="tooltip" data-placement="top" data-original-title="Excluir informativo">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="70%">
+                                    <b class="blog">Blog</b>
+                                    Novo usuário registrado
+                                </td>
+                                <td width="15%">
+                                    15/11/2013
+                                </td>
+                                <td width="15%">
+                                    <a href="#" class="excluir" data-toggle="tooltip" data-placement="top" data-original-title="Excluir informativo">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="70%">
+                                    <b class="blog">Blog</b>
+                                    Novo usuário registrado
+                                </td>
+                                <td width="15%">
+                                    15/11/2013
+                                </td>
+                                <td width="15%">
+                                    <a href="#" class="excluir" data-toggle="tooltip" data-placement="top" data-original-title="Excluir informativo">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="70%">
+                                    <b class="blog">Blog</b>
+                                    Novo usuário registrado
+                                </td>
+                                <td width="15%">
+                                    15/11/2013
+                                </td>
+                                <td width="15%">
+                                    <a href="#" class="excluir" data-toggle="tooltip" data-placement="top" data-original-title="Excluir informativo">Excluir</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

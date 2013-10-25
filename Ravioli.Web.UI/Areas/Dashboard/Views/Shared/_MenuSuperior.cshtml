@@ -1,0 +1,54 @@
+﻿@model Ravioli.Web.UI.Areas.Dashboard.Models.Usuario
+
+<div class="navbar no-radius">
+    <div class="brand">Logo Martin Luz</div>
+    <div class="breadcrumb">
+        @ViewBag.Migalha
+    </div>
+    <div class="navbar-right">
+        <div class="itens-usuario">
+            <div class="notificacao">
+                <button class="dropdown-toggle" data-toggle="dropdown">
+                    <b>2</b>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>Notificações</li>
+                    
+                    @if (Model.Dados.LstNotificacao != null)
+                    {
+                        foreach (var x in Model.Dados.LstNotificacao)
+                        {
+                            <li>
+                                <a href=" @x.Link "><b class="plus"></b> @x.Mensagem </a>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <li>
+                            <h4>Nenhum informativo no momento.</h4>
+                        </li>
+                    }
+                    
+                </ul>
+            </div>
+            <div class="menu-usuario">
+                <a href="/" data-target="#" data-toggle="dropdown">
+                    <b>
+                        @ViewBag.NomeUsuario
+                    </b>
+                    <i>V</i>
+                    <span>
+                        <img src="@ViewBag.Foto"/>
+                    </span>
+                </a>
+                <ul class="dropdown-menu no-radius no-shadow">
+                    <li><a href="#"><b class="minha-conta"></b>Minha Conta</a></li>
+                    <li><a href="#"><b class="novo-usuario"></b>Novo Usuário</a></li>
+                    <li><a href="#"><b class="tela-cheia"></b>Tela Cheia</a></li>
+                    <li><a href="Login/Sair"><b class="sair-admin"></b>Sair do Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

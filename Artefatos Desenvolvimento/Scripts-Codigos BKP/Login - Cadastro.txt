@@ -1,0 +1,39 @@
+@model Ravioli.DAL.tbUsuario
+<div class="navbar navbar-default no-radius">
+    <div class="container">
+        <div class="logo-marca @ViewBag.ModoClass"><span>Logo Marca - Martin Luz</span>Login</div>
+    </div>
+</div>
+<div class="container frm">
+    <div class="row">
+        @using (Html.BeginForm("", "Login", FormMethod.Post))
+        {
+            @Html.ValidationSummary()
+            <div class="frm-login">
+                <div class="form-group">
+                    <div>
+                        @Html.TextBoxFor(model => model.email, "", new { Class = "form-control no-radius", placeholder = "Usuário" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        @Html.PasswordFor(model => model.senha, new { Class = "form-control no-radius", placeholder = "Senha" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        @Html.ActionLink("Esqueceu sua senha?", "../login/esqueci-minha-senha", "", new { }, new { Class = "btn btn-link", Title = "Clique aqui para resetar sua senha!" })
+                        <button type="submit" class="btn btn-primary col-md-offset-4" title="Clique para entrar no sistema Martin Luz">Entrar</button>
+                        @*@Html.ActionLink("Entrar", "", "", new{ }, new{ Id = "bt-frm-entrar", Class = "btn btn-primary col-md-offset-4", Title = "Clique para entrar no sistema Martin Luz"})*@
+                    </div>
+                </div>
+                @if (TempData["Erro"] != null)
+                {
+                    <div class="alert alert-dismissable alert-danger">
+                        @ViewBag.ErroMsg
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>

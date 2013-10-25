@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3c5a2aa6d5d44b65bb541026b4fd47a6" Name="Diagram1">
+        <EntityTypeShape EntityType="admin_reservasModel.tbArtigo" Width="1.5" PointX="9.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbArtigoCategoria" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbArtigoCategoriaStatus" Width="1.5" PointX="2.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbArtigoComentario" Width="1.5" PointX="12" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbArtigoComentarioStatus" Width="1.5" PointX="9.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbArtigoCompartilhado" Width="1.5" PointX="15" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbArtigoStatus" Width="1.5" PointX="4.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbArtigoTags" Width="1.5" PointX="11.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbHistorico" Width="1.5" PointX="7.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbHistoricoTipo" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbNotificacao" Width="1.5" PointX="5.25" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbNotificacaoAcao" Width="1.5" PointX="3" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbNotificacaoAlvo" Width="1.5" PointX="3" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbNotificacaoTipo" Width="1.5" PointX="3" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbPrato" Width="1.5" PointX="10.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbPratoCategoria" Width="1.5" PointX="8.25" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbPratoCategoriaStatus" Width="1.5" PointX="6" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbPratoRestaurante" Width="1.5" PointX="12.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbPratoStatus" Width="1.5" PointX="8.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbReserva" Width="1.5" PointX="9.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbReservaOrigem" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbReservaStatus" Width="1.5" PointX="7.5" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbRestaurante" Width="1.5" PointX="7.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbRestauranteStatus" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuario" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuarioCargo" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuarioCargoStatus" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuarioDepartamento" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuarioDepartamentoStatus" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuarioExterno" Width="1.5" PointX="7.5" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuarioExternoStatus" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuarioExternoTipoPerfil" Width="1.5" PointX="5.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuarioNivel" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuarioNotificacao" Width="1.5" PointX="7.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="admin_reservasModel.tbUsuarioStatus" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbArtigoComentario_tbArtigo" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbArtigoCompartilhado_tbArtigo" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbArtigoComentario_tbArtigoComentarioStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbArtigoComentario_tbUsuarioExterno" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbArtigoCompartilhado_tbUsuarioExterno" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbHistorico_tbHistoricoTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbHistorico_tbUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbNotificacao_tbNotificacaoAcao" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbNotificacao_tbNotificacaoAlvo" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbNotificacao_tbNotificacaoTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbUsuarioNotificacao_tbNotificacao" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbPrato_tbPratoCategoria" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbPrato_tbPratoStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbPrato_tbUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbPratoRestaurante_tbPrato" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbPratoCategoria_tbPratoCategoriaStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbPratoRestaurante_tbRestaurante" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbReserva_tbReservaOrigem" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbReserva_tbReservaStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbReserva_tbRestaurante" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbReserva_tbUsuarioExterno" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbRestaurante_tbRestauranteStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbRestaurante_tbUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbUsuario_tbUsuarioCargo" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbUsuario_tbUsuarioDepartamento" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbUsuario_tbUsuarioNivel" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbUsuario_tbUsuarioStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbUsuarioNotificacao_tbUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbUsuarioCargo_tbUsuarioCargoStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbUsuarioDepartamento_tbUsuarioDepartamentoStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbUsuarioExterno_tbUsuarioExternoStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="admin_reservasModel.FK_tbUsuarioExterno_tbUsuarioExternoTipoPerfil" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

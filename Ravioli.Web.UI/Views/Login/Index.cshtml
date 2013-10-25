@@ -1,0 +1,47 @@
+﻿@using System.Collections
+@model Ravioli.Web.UI.Models.Login
+@{
+    ViewBag.ErroMsg = Html.ValidationSummary();
+}
+<div class="container col-md-3 frm">
+    <div class="row text-center logo-marca"><span><b>ML</b>Entrar no Administrador</span></div>
+    @using (Html.BeginForm("", "Login", FormMethod.Post, new { id = "frm-login" }))
+    {
+        <div class="frm-login">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon addon-login no-radius">Login</div>
+                    @Html.TextBoxFor(model => model.Email, "", new { Class = "no-shadow form-control no-radius", placeholder = "Usuário" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon addon-senha no-radius">Senha</div>
+                    @Html.PasswordFor(model => model.Senha, new { Class = "no-shadow form-control no-radius", placeholder = "Senha" })
+                </div>
+            </div>
+            @if (TempData["Erro"] != null)
+            {
+                <div class="alert alert-dismissable alert-danger">
+                    @if (TempData["ErroMsg"].GetType().Name == "List`1")
+                    {
+                        foreach (var item in (IEnumerable) TempData["ErroMsg"])
+                        {
+                            @item<br />
+                        }
+                    }
+                    else
+                    {
+                        @TempData["ErroMsg"]
+                    }
+                </div>
+            }
+            <div class="form-group">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" title="Clique para entrar no sistema Martin Luz">Entrar</button>
+                    @Html.ActionLink("Esqueceu sua senha?", "../login/esqueci-minha-senha", "", new { }, new { Class = "btn btn-link", Title = "Clique aqui para resetar sua senha!" })
+                </div>
+            </div>
+        </div>
+    }
+</div>
